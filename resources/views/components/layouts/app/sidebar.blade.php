@@ -16,18 +16,106 @@
                     <flux:navlist.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
                 </flux:navlist.group>
             </flux:navlist>
+            {{-- Grupo desplegable (submenú) --}}
+            <flux:navlist.group heading="Almacén" expandable>
+                <flux:navlist.item
+                    icon="rectangle-stack"
+                    :href="route('dashboard')"
+                    :current="request()->routeIs('dashboard')"
+                    wire:navigate
+                >
+                    Artículos
+                </flux:navlist.item>
+
+                <flux:navlist.item
+                    icon="bookmark"
+                    :href="route('dashboard')"
+                    :current="request()->routeIs('dashboard')"
+                    wire:navigate
+                >
+                    Categorías
+                </flux:navlist.item>
+            </flux:navlist.group>
+            <flux:navlist.group heading="Compras" expandable>
+                <flux:navlist.item
+                    icon="rectangle-stack"
+                    :href="route('dashboard')"
+                    :current="request()->routeIs('dashboard')"
+                    wire:navigate
+                >
+                    Artículos
+                </flux:navlist.item>
+
+                <flux:navlist.item
+                    icon="bookmark"
+                    :href="route('dashboard')"
+                    :current="request()->routeIs('dashboard')"
+                    wire:navigate
+                >
+                    Categorías
+                </flux:navlist.item>
+            </flux:navlist.group>
+            <flux:navlist.group heading="Ventas" expandable>
+                <flux:navlist.item
+                    icon="rectangle-stack"
+                    :href="route('dashboard')"
+                    :current="request()->routeIs('dashboard')"
+                    wire:navigate
+                >
+                    Artículos
+                </flux:navlist.item>
+
+                <flux:navlist.item
+                    icon="bookmark"
+                    :href="route('dashboard')"
+                    :current="request()->routeIs('dashboard')"
+                    wire:navigate
+                >
+                    Categorías
+                </flux:navlist.item>
+            </flux:navlist.group>
+            <flux:navlist.group heading="Acceso" expandable>
+                <flux:navlist.item
+                    icon="rectangle-stack"
+                    :href="route('dashboard')"
+                    :current="request()->routeIs('dashboard')"
+                    wire:navigate
+                >
+                    Artículos
+                </flux:navlist.item>
+
+                <flux:navlist.item
+                    icon="bookmark"
+                    :href="route('dashboard')"
+                    :current="request()->routeIs('dashboard')"
+                    wire:navigate
+                >
+                    Categorías
+                </flux:navlist.item>
+            </flux:navlist.group>
+            <flux:navlist.group heading="Consultas" expandable>
+                <flux:navlist.item
+                    icon="rectangle-stack"
+                    :href="route('dashboard')"
+                    :current="request()->routeIs('dashboard')"
+                    wire:navigate
+                >
+                    Compras
+                </flux:navlist.item>
+
+                <flux:navlist.item
+                    icon="bookmark"
+                    :href="route('dashboard')"
+                    :current="request()->routeIs('dashboard')"
+                    wire:navigate
+                >
+                    Ventas
+                </flux:navlist.item>
+            </flux:navlist.group>
 
             <flux:spacer />
 
-            <flux:navlist variant="outline">
-                <flux:navlist.item icon="folder-git-2" href="https://github.com/laravel/livewire-starter-kit" target="_blank">
-                {{ __('Repository') }}
-                </flux:navlist.item>
 
-                <flux:navlist.item icon="book-open-text" href="https://laravel.com/docs/starter-kits" target="_blank">
-                {{ __('Documentation') }}
-                </flux:navlist.item>
-            </flux:navlist>
 
             <!-- Desktop User Menu -->
             <flux:dropdown position="bottom" align="start">
