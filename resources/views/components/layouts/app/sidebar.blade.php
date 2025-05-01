@@ -29,11 +29,19 @@
 
                 <flux:navlist.item
                     icon="bookmark"
-                    :href="route('dashboard')"
-                    :current="request()->routeIs('dashboard')"
+                    :href="route('warehouse.categories')"
+                    :current="request()->routeIs('warehouse.categories')"
                     wire:navigate
                 >
                     Categorías
+                </flux:navlist.item>
+                <flux:navlist.item
+                    icon="archive-box"
+                    :href="route('warehouse.units')"
+                    :current="request()->routeIs('warehouse.units')"
+                    wire:navigate
+                >
+                    Unidades
                 </flux:navlist.item>
             </flux:navlist.group>
             <flux:navlist.group heading="Compras" expandable>
@@ -216,5 +224,18 @@
         {{ $slot }}
 
         @fluxScripts
+        @yield('scripts')
+        <script>
+            document.addEventListener('livewire:init', () => {
+                Livewire.on('alert', function (data) {
+                    Swal.fire({
+                        title: data[0].title,
+                        text: data[0].message,
+                        icon: data[0].icon,
+                        confirmButtonText: 'ok'
+                    })
+                });
+            });
+        </script>
     </body>
 </html>
