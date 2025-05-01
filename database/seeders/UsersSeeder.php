@@ -19,7 +19,14 @@ class UsersSeeder extends Seeder
             'email'=>'luis.mayta@gmail.com',
             'active' => true,
             'password' => Hash::make('41887192')
-        ])->assignRole('administrator');
+        ],[
+            'name' => 'Jesus Zapana',
+            'email'=>'jazapanaa@gmail.com',
+            'active' => true,
+            'password' => Hash::make('40269628')
+
+            ]
+        )->assignRole('administrator');
 
 
     }
