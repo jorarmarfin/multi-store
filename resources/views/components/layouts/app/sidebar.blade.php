@@ -19,12 +19,39 @@
             {{-- Grupo desplegable (submenú) --}}
             <flux:navlist.group heading="Almacén" expandable>
                 <flux:navlist.item
-                    icon="rectangle-stack"
-                    :href="route('dashboard')"
-                    :current="request()->routeIs('dashboard')"
+                    icon="arrow-down-left"
+                    :href="route('warehouse.entries')"
+                    :current="request()->routeIs('warehouse.entries')"
                     wire:navigate
                 >
-                    Artículos
+                    Ingreso a almacén
+                </flux:navlist.item>
+
+                <flux:navlist.item
+                    icon="arrow-up-right"
+                    :href="route('warehouse.outputs')"
+                    :current="request()->routeIs('warehouse.outputs')"
+                    wire:navigate
+                >
+                    Salida a almacén
+                </flux:navlist.item>
+
+                <flux:navlist.item
+                    icon="inbox-stack"
+                    :href="route('warehouse.products')"
+                    :current="request()->routeIs('warehouse.products')"
+                    wire:navigate
+                >
+                    Productos
+                </flux:navlist.item>
+
+                <flux:navlist.item
+                    icon="user-group"
+                    :href="route('warehouse.suppliers')"
+                    :current="request()->routeIs('warehouse.suppliers')"
+                    wire:navigate
+                >
+                    Proveedores
                 </flux:navlist.item>
 
                 <flux:navlist.item
@@ -35,6 +62,7 @@
                 >
                     Categorías
                 </flux:navlist.item>
+
                 <flux:navlist.item
                     icon="archive-box"
                     :href="route('warehouse.units')"

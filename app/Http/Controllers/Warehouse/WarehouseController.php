@@ -20,4 +20,20 @@ class WarehouseController extends Controller
     {
         return view('warehouse.unit.index');
     }
+    public function pageEntries()
+    {
+        return view('warehouse.entry.index');
+    }
+    public function pageOutputs()
+    {
+        return view('warehouse.output.index');
+    }
+    public function pageProducts()
+    {
+        return view('warehouse.product.index');
+    }
+    public function pageSuppliers()
+    {
+        return view('warehouse.supplier.index');
+    }
 }

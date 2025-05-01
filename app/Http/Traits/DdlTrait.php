@@ -3,17 +3,22 @@
 namespace App\Http\Traits;
 
 use App\Models\Category;
+use App\Models\Supplier;
 use App\Models\Unit;
 
 trait DdlTrait
 {
     public function ddlCategories()
     {
-        return $this->getDdl(Category::class);
+        return $this->getDdl(Category::class,'id','name');
     }
     public function ddlUnits()
     {
-        return $this->getDdl(Unit::class);
+        return $this->getDdl(Unit::class,'id','description');
+    }
+    public function ddlSuppliers()
+    {
+        return $this->getDdl(Supplier::class,'id','name');
     }
     public function getDdl($model, $key = 'id', $value = 'code')
     {

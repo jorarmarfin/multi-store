@@ -91,12 +91,14 @@ table td {
     @apply overflow-x-auto rounded-xl shadow-sm ring-1 ring-zinc-200 dark:ring-white/10;
 }
 
+.pagination{
+    @apply m-4;
+}
+
 .form-group{
     @apply grid gap-2 my-4;
 }
-.form-label {
 
-}
 .form-text {
     @apply  w-full rounded-md border border-gray-300 focus:border-gray-500 focus:ring-1 focus:ring-gray-500 shadow-sm transition-all duration-150 text-sm p-2 bg-white text-gray-900 placeholder-gray-400;
 }
