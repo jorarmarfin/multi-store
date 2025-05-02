@@ -51,7 +51,7 @@
                 @error('movement_date') is-invalid @enderror">
                 Fecha de movimiento
             </label>
-            <input type="date" id="movement_date" class="form-text" wire:model="form.movement_date">
+            <input type="datetime-local" id="movement_date" class="form-text" wire:model="form.movement_date">
             @error('form.movement_date')
             <div class="invalid-feedback">
                 {{ $message }}
@@ -82,10 +82,6 @@
             </div>
             @enderror
         </div>
-
-
-
-
         <div class="pt-12">
             <button type="submit" class="btn-primary">
                 @if($isEdit)
@@ -102,13 +98,19 @@
             <thead>
             <tr>
                 <th>Producto</th>
+                <th>Almacén</th>
+                <th>Cantidad</th>
+                <th>Fecha de movimiento</th>
                 <th>Acciones</th>
             </tr>
             </thead>
             <tbody>
             @foreach ($inventoryMovements as $inventoryMovement)
                 <tr>
-                    <td>{{ $inventoryMovement->name }}</td>
+                    <td>{{ $inventoryMovement->product->name }}</td>
+                    <td>{{ $inventoryMovement->warehouse->name }}</td>
+                    <td>{{ $inventoryMovement->quantity }}</td>
+                    <td>{{ $inventoryMovement->movement_date }}</td>
                     <td>
                         <button wire:click="editInventoryMovement({{ $inventoryMovement->id }})" class="btn-secondary">
                             Editar

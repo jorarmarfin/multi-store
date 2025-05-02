@@ -14,20 +14,21 @@ class WarehouseEntryLive extends Component
     use InventoryMovementsTrait,MovementTypeTrait, DdlTrait, WithPagination;
     public InventoryMovementsForm $form;
     public bool $isEdit = false;
-    public int $category_id;
+    public int $inventory_movement_id;
     public function render()
     {
         return view('livewire.warehouse.warehouse-entry-live',[
             'inventoryMovements' => $this->getInventoryMovements('Entrada')->paginate(50),
             'products' => $this->ddlProducts(),
-            'movement_type' => $this->getMovementTypeByField('name', 'Entrada')->id,
             'warehouses' => $this->ddlWarehouses(),
         ]);
     }
     public function saveInventoryMovement():void
     {
+        $this->form->movement_type_id = $this->getMovementTypeByField('name', 'Entrada')->id;
+        $this->form->user_id = auth()->user()->id;
         if($this->isEdit){
-            $this->form->update($this->getInventoryMovement($this->category_id));
+            $this->form->update($this->getInventoryMovement($this->inventory_movement_id));
             $title = 'Actualizar ingreso';
             $icon = 'success';
             $message = 'Ingreso actualizado correctamente';
@@ -44,14 +45,14 @@ class WarehouseEntryLive extends Component
             'message' => $message,
         ]);
     }
-    public function editInventoryMovement($category_id):void
+    public function editInventoryMovement($inventory_movement_id):void
     {
-        $this->form->show($this->getInventoryMovement($category_id));
+        $this->form->show($this->getInventoryMovement($inventory_movement_id));
         $this->isEdit = true;
-        $this->category_id = $category_id;
+        $this->inventory_movement_id = $inventory_movement_id;
     }
-    public function deleteInventoryMovement($category_id):void
+    public function deleteInventoryMovement($inventory_movement_id):void
     {
-        $this->form->delete($category_id);
+        $this->form->delete($inventory_movement_id);
     }
 }

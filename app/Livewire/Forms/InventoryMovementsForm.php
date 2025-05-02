@@ -11,57 +11,59 @@ class InventoryMovementsForm extends Form
     #[Validate('required')]
     public int $product_id = 0;
     #[Validate('required')]
-    public int $movement_type_id = 0;
-    #[Validate('required')]
     public int $warehouse_id = 0;
     #[Validate('required')]
     public int $quantity = 0;
-    public int $user_id = 0;
     #[Validate('required')]
     public $movement_date = '';
-    #[Validate('required')]
+
+    public int $user_id = 0;
+    public int $movement_type_id = 0;
     public $reference = '';
-    #[Validate('required')]
     public $notes = '';
+
+    public $data =[
+        'product_id',
+        'movement_type_id',
+        'warehouse_id',
+        'quantity',
+        'user_id',
+        'movement_date',
+        'reference',
+        'notes'
+    ];
 
     public function store()
     {
         $this->validate();
 
         InventoryMovement::create(
-            $this->only([
-                'product_id',
-                'movement_type_id',
-                'warehouse_id',
-                'quantity',
-                'user_id',
-                'movement_date',
-                'reference',
-                'notes'
-            ])
+            $this->only($this->data)
         );
         $this->reset();
     }
-    public function show(InventoryMovement $category): void
+    public function show(InventoryMovement $inventory_movement): void
     {
         $this->fill([
-            'name' => $category->name,
-            'description' => $category->description,
-            'active' => (bool)$category->active,
+            'product_id' => $inventory_movement->product_id,
+            'movement_type_id' => $inventory_movement->movement_type_id,
+            'warehouse_id' => $inventory_movement->warehouse_id,
+            'quantity' => $inventory_movement->quantity,
+            'movement_date' => $inventory_movement->movement_date,
         ]);
     }
-    public function update(InventoryMovement $category): void
+    public function update(InventoryMovement $inventory_movement): void
     {
         $this->validate();
 
-        $category->update(
-            $this->only(['name', 'description', 'active'])
+        $inventory_movement->update(
+            $this->only($this->data)
         );
         $this->reset();
     }
-    public function delete($category_id): void
+    public function delete($inventory_movement_id): void
     {
-        $category = InventoryMovement::find($category_id);
-        $category->delete();
+        $inventory_movement = InventoryMovement::find($inventory_movement_id);
+        $inventory_movement->delete();
     }
 }
