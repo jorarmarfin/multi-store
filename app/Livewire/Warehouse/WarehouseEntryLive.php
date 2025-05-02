@@ -15,17 +15,18 @@ class WarehouseEntryLive extends Component
     public InventoryMovementsForm $form;
     public bool $isEdit = false;
     public int $inventory_movement_id;
+    private string $movement_type = 'Entrada';
     public function render()
     {
         return view('livewire.warehouse.warehouse-entry-live',[
-            'inventoryMovements' => $this->getInventoryMovements('Entrada')->paginate(50),
+            'inventoryMovements' => $this->getInventoryMovements($this->movement_type)->paginate(50),
             'products' => $this->ddlProducts(),
             'warehouses' => $this->ddlWarehouses(),
         ]);
     }
     public function saveInventoryMovement():void
     {
-        $this->form->movement_type_id = $this->getMovementTypeByField('name', 'Entrada')->id;
+        $this->form->movement_type_id = $this->getMovementTypeByField('name', $this->movement_type)->id;
         $this->form->user_id = auth()->user()->id;
         if($this->isEdit){
             $this->form->update($this->getInventoryMovement($this->inventory_movement_id));

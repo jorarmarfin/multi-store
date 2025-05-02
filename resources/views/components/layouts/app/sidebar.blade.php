@@ -29,8 +29,8 @@
 
                 <flux:navlist.item
                     icon="arrow-up-right"
-                    :href="route('warehouse.outputs')"
-                    :current="request()->routeIs('warehouse.outputs')"
+                    :href="route('warehouse.dispatches')"
+                    :current="request()->routeIs('warehouse.dispatches')"
                     wire:navigate
                 >
                     Salida a almacén

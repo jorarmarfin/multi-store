@@ -4,5 +4,5 @@
         Salidas del almacén
     </h1>
     <hr class="my-4">
-    <livewire:warehouse.store-outgoing-stock-live>
+    <livewire:warehouse.warehouse-dispatch-live>
 </x-layouts.app>

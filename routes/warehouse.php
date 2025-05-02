@@ -14,10 +14,10 @@ Route::middleware(['auth','verified'])
         ->name('product.suppliers');
     Route::get('entries', [WarehouseController::class, 'pageEntries'])
         ->name('entries');
+    Route::get('dispatches', [WarehouseController::class, 'pageDispatches'])
+        ->name('dispatches');
     Route::get('movements-type', [WarehouseController::class, 'pageMovementsType'])
         ->name('movements-type');
-    Route::get('outputs', [WarehouseController::class, 'pageOutputs'])
-        ->name('outputs');
     Route::get('suppliers', [WarehouseController::class, 'pageSuppliers'])
         ->name('suppliers');
     Route::get('categories', [WarehouseController::class, 'pageCategories'])
