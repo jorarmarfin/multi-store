@@ -9,7 +9,7 @@ class WarehouseController extends Controller
 {
     public function index()
     {
-        dd(111);
+        return view('warehouse.index');
     }
     public function pageCategories()
     {
@@ -35,5 +35,13 @@ class WarehouseController extends Controller
     public function pageSuppliers()
     {
         return view('warehouse.supplier.index');
+    }
+    public function pageMovementsType()
+    {
+        return view('warehouse.movements-type.index');
+    }
+    public function pageProductSuppliers($product_id)
+    {
+        return view('warehouse.product.suppliers', ['product_id' => $product_id]);
     }
 }

@@ -3,11 +3,21 @@
 namespace App\Http\Traits;
 
 use App\Models\Category;
+use App\Models\Product;
 use App\Models\Supplier;
 use App\Models\Unit;
+use App\Models\Warehouse;
 
 trait DdlTrait
 {
+    public function ddlWarehouses()
+    {
+        return $this->getDdl(Warehouse::class,'id','name');
+    }
+    public function ddlProducts()
+    {
+        return $this->getDdl(Product::class,'id','name');
+    }
     public function ddlCategories()
     {
         return $this->getDdl(Category::class,'id','name');

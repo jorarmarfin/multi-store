@@ -16,13 +16,9 @@ class ProductForm extends Form
     #[Validate('required')]
     public int $category_id = 0;
     #[Validate('required')]
-    public int $supplier_id = 0;
-    #[Validate('required')]
     public int $unit_id = 0;
-    #[Validate('required')]
-    public float $cost_price = 0;
 
-    public $dataProduct = ['code', 'name', 'description', 'category_id', 'supplier_id', 'unit_id', 'cost_price'];
+    public $dataProduct = ['code', 'name', 'description', 'category_id', 'unit_id'];
 
     public function store()
     {

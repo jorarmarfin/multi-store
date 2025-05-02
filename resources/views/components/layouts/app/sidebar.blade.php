@@ -71,6 +71,22 @@
                 >
                     Unidades
                 </flux:navlist.item>
+                <flux:navlist.item
+                    icon="arrow-path"
+                    :href="route('warehouse.movements-type')"
+                    :current="request()->routeIs('warehouse.movements-type')"
+                    wire:navigate
+                >
+                    Tipos de movimiento
+                </flux:navlist.item>
+                <flux:navlist.item
+                    icon="building-office"
+                    :href="route('warehouse.index')"
+                    :current="request()->routeIs('warehouse.index')"
+                    wire:navigate
+                >
+                    Almacenes
+                </flux:navlist.item>
             </flux:navlist.group>
             <flux:navlist.group heading="Compras" expandable>
                 <flux:navlist.item

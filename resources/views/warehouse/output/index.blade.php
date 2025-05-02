@@ -1,6 +1,6 @@
 <x-layouts.app title="Salidas del almacén">
     <h1 class="title-page">
-        <i class="fas fa-bookmark"></i>
+        <i class="fas fa-cloud-upload-alt"></i>
         Salidas del almacén
     </h1>
     <hr class="my-4">

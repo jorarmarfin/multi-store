@@ -75,38 +75,6 @@
             </div>
             @enderror
         </div>
-        <div class="form-group">
-            <label for="supplier_id" class="form-label
-                @error('supplier_id') is-invalid @enderror">
-                Proveedor
-            </label>
-            <select class="form-select" id="supplier_id"
-                    wire:model="form.supplier_id">
-                <option value="">Seleccione un proveedor</option>
-                @foreach($suppliers as $key => $supplier)
-                    <option value="{{ $key }}">{{ $supplier }}</option>
-                @endforeach
-            </select>
-            @error('form.supplier_id')
-            <div class="invalid-feedback">
-                {{ $message }}
-            </div>
-            @enderror
-        </div>
-        <div class="form-group">
-            <label for="cost_price" class="form-label
-                @error('cost_price') is-invalid @enderror">
-                Precio de costo
-            </label>
-            <input type="number" class="form-text" id="cost_price"
-                   wire:model="form.cost_price" placeholder="Precio de costo" min="0" step="0.01">
-            @error('form.cost_price')
-            <div class="invalid-feedback">
-                {{ $message }}
-            </div>
-            @enderror
-        </div>
-
 
         <div class="pt-12">
             <button type="submit" class="btn-primary">
@@ -126,10 +94,8 @@
                 <th>Código</th>
                 <th>Nombre</th>
                 <th>Descripción</th>
-                <th>Precio de costo</th>
                 <th>Categoría</th>
                 <th>Unidad</th>
-                <th>Proveedor</th>
                 <th>Acciones</th>
             </tr>
             </thead>
@@ -139,17 +105,19 @@
                     <td>{{ $product->code }}</td>
                     <td>{{ $product->name }}</td>
                     <td>{{ $product->description }}</td>
-                    <td>{{ $product->cost_price }}</td>
                     <td>{{ $product->category?->name }}</td>
                     <td>{{ $product->unit?->code }}</td>
-                    <td>{{ $product->supplier?->name }}</td>
                     <td>
+                        <a href="{{route('warehouse.product.suppliers',$product->id)}}" class="btn-primary m-1">
+                            Ver
+                        </a>
                         <button wire:click="editProduct({{ $product->id }})" class="btn-secondary m-1">
                             Editar
                         </button>
                         <button @click="$dispatch('alert-delete',{{$product->id}})" class="btn-danger m-1">
                             Eliminar
                         </button>
+
                     </td>
                 </tr>
             @endforeach

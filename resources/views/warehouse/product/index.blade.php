@@ -1,6 +1,6 @@
 <x-layouts.app title="Productos">
     <h1 class="title-page">
-        <i class="fas fa-bookmark"></i>
+        <i class="fas fa-archive"></i>
         Productos
     </h1>
     <hr class="my-4">
