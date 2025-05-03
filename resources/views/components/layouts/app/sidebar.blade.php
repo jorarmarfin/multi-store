@@ -104,7 +104,7 @@
                     :current="request()->routeIs('dashboard')"
                     wire:navigate
                 >
-                    Artículos
+                    Ingresos
                 </flux:navlist.item>
 
                 <flux:navlist.item
@@ -113,7 +113,7 @@
                     :current="request()->routeIs('dashboard')"
                     wire:navigate
                 >
-                    Categorías
+                    Proveedores
                 </flux:navlist.item>
             </flux:navlist.group>
             <flux:navlist.group heading="Ventas" expandable>
@@ -123,7 +123,7 @@
                     :current="request()->routeIs('dashboard')"
                     wire:navigate
                 >
-                    Artículos
+                    Venta
                 </flux:navlist.item>
 
                 <flux:navlist.item
@@ -132,17 +132,17 @@
                     :current="request()->routeIs('dashboard')"
                     wire:navigate
                 >
-                    Categorías
+                    Clientes
                 </flux:navlist.item>
             </flux:navlist.group>
-            <flux:navlist.group heading="Acceso" expandable>
+            <flux:navlist.group heading="Administración" expandable>
                 <flux:navlist.item
                     icon="rectangle-stack"
                     :href="route('dashboard')"
                     :current="request()->routeIs('dashboard')"
                     wire:navigate
                 >
-                    Artículos
+                    Usuarios
                 </flux:navlist.item>
 
                 <flux:navlist.item
@@ -151,7 +151,7 @@
                     :current="request()->routeIs('dashboard')"
                     wire:navigate
                 >
-                    Categorías
+                    Permisos
                 </flux:navlist.item>
             </flux:navlist.group>
             <flux:navlist.group heading="Consultas" expandable>
