@@ -19,6 +19,15 @@
             {{-- Grupo desplegable (submenú) --}}
             <flux:navlist.group heading="Almacén" expandable>
                 <flux:navlist.item
+                    icon="numbered-list"
+                    :href="route('warehouse.inventory')"
+                    :current="request()->routeIs('warehouse.inventory')"
+                    wire:navigate
+                >
+                    inventario
+                </flux:navlist.item>
+
+                <flux:navlist.item
                     icon="arrow-down-left"
                     :href="route('warehouse.entries')"
                     :current="request()->routeIs('warehouse.entries')"

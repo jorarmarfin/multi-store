@@ -26,8 +26,20 @@ class WarehouseDispatchLive extends Component
     }
     public function saveInventoryMovement():void
     {
+        if (!$this->validarStockDisponible(
+            $this->movement_type,$this->form->product_id,$this->form->warehouse_id
+        )) {
+            $this->dispatch('alert', [
+                'title' => 'Error',
+                'icon' => 'error',
+                'message' => 'No hay suficiente stock disponible para esta salida.',
+            ]);
+            return;
+        }
+
         $this->form->movement_type_id = $this->getMovementTypeByField('name', $this->movement_type)->id;
         $this->form->user_id = auth()->user()->id;
+
         if($this->isEdit){
             $this->form->update($this->getInventoryMovement($this->inventory_movement_id));
             $title = 'Actualizar ingreso';
@@ -55,5 +67,9 @@ class WarehouseDispatchLive extends Component
     public function deleteInventoryMovement($inventory_movement_id):void
     {
         $this->form->delete($inventory_movement_id);
+    }
+    public function mount()
+    {
+        $this->form->movement_date = now()->format('Y-m-d\TH:i');
     }
 }

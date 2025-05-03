@@ -112,9 +112,9 @@
                     <td>{{ $inventoryMovement->quantity }}</td>
                     <td>{{ $inventoryMovement->movement_date }}</td>
                     <td>
-                        <button wire:click="editInventoryMovement({{ $inventoryMovement->id }})" class="btn-secondary">
-                            Editar
-                        </button>
+{{--                        <button wire:click="editInventoryMovement({{ $inventoryMovement->id }})" class="btn-secondary">--}}
+{{--                            Editar--}}
+{{--                        </button>--}}
                         <button @click="$dispatch('alert-delete',{{$inventoryMovement->id}})" class="btn-danger">
                             Eliminar
                         </button>

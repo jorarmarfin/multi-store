@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Events\InventoryMovementCreated;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
@@ -40,4 +41,10 @@ class InventoryMovement extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    protected $dispatchesEvents = [
+        'created' => InventoryMovementCreated::class,
+        'updated' => InventoryMovementCreated::class,
+    ];
+
 }

@@ -44,4 +44,8 @@ class WarehouseController extends Controller
     {
         return view('warehouse.product.suppliers', ['product_id' => $product_id]);
     }
+    public function pageInventory()
+    {
+        return view('warehouse.inventory.index');
+    }
 }

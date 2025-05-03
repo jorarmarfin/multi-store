@@ -26,5 +26,7 @@ Route::middleware(['auth','verified'])
         ->name('units');
     Route::get('/', [WarehouseController::class, 'index'])
         ->name('index');
+    Route::get('inventory', [WarehouseController::class, 'pageInventory'])
+        ->name('inventory');
 });
 

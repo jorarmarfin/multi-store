@@ -56,4 +56,8 @@ class WarehouseEntryLive extends Component
     {
         $this->form->delete($inventory_movement_id);
     }
+    public function mount()
+    {
+        $this->form->movement_date = now()->format('Y-m-d\TH:i');
+    }
 }
