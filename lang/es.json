@@ -1,0 +1,20 @@
+{
+    "Log in to your account": "Iniciar sesión en tu cuenta",
+    "Email address": "Dirección de correo electrónico",
+    "Password": "Contraseña",
+    "Remember me": "Recuérdame",
+    "Log in": "Iniciar sesión",
+    "Forgot password": "¿Olvidaste tu contraseña",
+    "Forgot your password?": "¿Olvidaste tu contraseña?",
+    "Enter your email and password below to log in.": "Ingresa tu correo electrónico y contraseña a continuación para iniciar sesión.",
+    "Don't have an account?": "¿No tienes una cuenta?",
+    "Create an account": "Crear una cuenta",
+    "Name": "Nombre",
+    "Confirm password": "Confirmar contraseña",
+    "Crete account": "Crear cuenta",
+    "Already have an account?": "¿Ya tienes una cuenta?",
+    "General Administrator": "Administrador General",
+    "Inventory Supervisor": "Supervisor de Inventario",
+    "Warehouse Manager": "Gerente de Almacén",
+    "Billing Agent": "Agente de Facturación"
+}

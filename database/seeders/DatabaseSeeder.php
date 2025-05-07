@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
             SupplierSeeder::class,
             ProductSeeder::class,
             MovementTypeSeeder::class,
-            WarehouseSeeder::class
+            WarehouseSeeder::class,
+            SettingsSeeder::class
         ]);
     }
 }

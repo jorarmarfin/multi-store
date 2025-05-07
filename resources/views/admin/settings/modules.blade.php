@@ -4,5 +4,5 @@
         Configuraciones
     </h1>
     <hr class="my-4">
-    <livewire:admin.settings-live>
+    <livewire:admin.modules-settings-live>
 </x-layouts.app>

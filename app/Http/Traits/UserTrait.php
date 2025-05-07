@@ -2,25 +2,17 @@
 
 namespace App\Http\Traits;
 
-trait UsersTrait
-{
-    public function getCategories()
-    {
-        return Category::query();
-    }
-    public function save($data)
-    {
-        Category::create([
-            'name' => $data['name'],
-            'description' => $data['description'],
-            'active' => $data['active']
-        ]);
-        $this->reset();
+use App\Models\User;
 
-    }
-    public function getCategory($category_id)
+trait UserTrait
+{
+    public function getUsers()
     {
-        return Category::find($category_id);
+        return User::query();
+    }
+    public function getUser($user_id)
+    {
+        return User::find($user_id);
     }
 
 }

@@ -8,7 +8,7 @@ Route::middleware(['auth','verified'])
     ->name('admin.')
     ->group(function () {
 
-        Route::get('settings', [SettingController::class, 'index'])
-            ->name('settings');
+        Route::get('settings-modules', [SettingController::class, 'pageModules'])
+            ->name('settings.modules');
     });
 

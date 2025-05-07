@@ -187,6 +187,10 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'product_id' => 'Producto',
+        'warehouse_id' => 'Almacén',
+        'movement_date' => 'Fecha de movimiento',
+    ],
 
 ];
