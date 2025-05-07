@@ -16,5 +16,12 @@
     "General Administrator": "Administrador General",
     "Inventory Supervisor": "Supervisor de Inventario",
     "Warehouse Manager": "Gerente de Almacén",
-    "Billing Agent": "Agente de Facturación"
+    "Billing": "Facturación",
+    "Sales Manager": "Gerente de Ventas",
+    "Purchasing Manager": "Gerente de Compras",
+    "menu inventory supervisor": "Menú Supervisor de Inventario",
+    "menu warehouse manager": "Menú Gerente de Almacén",
+    "menu billing": "Menú de Facturación",
+    "menu access": "Menú de Acceso",
+    "menu general administrator": "Menú Administrador General"
 }

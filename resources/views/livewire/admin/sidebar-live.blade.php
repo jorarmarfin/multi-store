@@ -11,34 +11,39 @@
                                wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
         </flux:navlist.group>
     </flux:navlist>
-    <flux:navlist.group heading="Configuración" expandable>
-        <flux:navlist.item
-            icon="cog-8-tooth"
-            :href="route('admin.settings.modules')"
-            :current="request()->routeIs('admin.settings.modules')"
-            wire:navigate
-        >
-            Módulos
-        </flux:navlist.item>
-        <flux:navlist.item
-            icon="adjustments-horizontal"
-            :href="route('users.roles')"
-            :current="request()->routeIs('users.roles')"
-            wire:navigate
-        >
-            Roles
-        </flux:navlist.item>
+    @role('administrator')
+        <flux:navlist.group heading="Configuración" expandable>
 
-        <flux:navlist.item
-            icon="user-plus"
-            :href="route('users.permissions')"
-            :current="request()->routeIs('users.permissions')"
-            wire:navigate
-        >
-            Permisos
-        </flux:navlist.item>
-    </flux:navlist.group>
+            <flux:navlist.item
+                icon="cog-8-tooth"
+                :href="route('admin.settings.modules')"
+                :current="request()->routeIs('admin.settings.modules')"
+                wire:navigate
+            >
+                Módulos
+            </flux:navlist.item>
+            <flux:navlist.item
+                icon="adjustments-horizontal"
+                :href="route('users.roles')"
+                :current="request()->routeIs('users.roles')"
+                wire:navigate
+            >
+                Roles
+            </flux:navlist.item>
+
+            <flux:navlist.item
+                icon="user-plus"
+                :href="route('users.permissions')"
+                :current="request()->routeIs('users.permissions')"
+                wire:navigate
+            >
+                Permisos
+            </flux:navlist.item>
+
+        </flux:navlist.group>
+    @endrole
     @if($modules['modules.warehouse'])
+        @canany(['menu warehouse manager','menu general administrator'])
         <flux:navlist.group heading="Almacén" expandable>
             <flux:navlist.item
                 icon="numbered-list"
@@ -119,8 +124,10 @@
                 Almacenes
             </flux:navlist.item>
         </flux:navlist.group>
+        @endcanany
     @endif
     @if($modules['modules.sales'])
+        @canany(['menu warehouse manager','menu general administrator'])
         <flux:navlist.group heading="Compras" expandable>
             <flux:navlist.item
                 icon="rectangle-stack"
@@ -132,16 +139,18 @@
             </flux:navlist.item>
 
             <flux:navlist.item
-                icon="bookmark"
-                :href="route('dashboard')"
-                :current="request()->routeIs('dashboard')"
+                icon="user-group"
+                :href="route('warehouse.suppliers')"
+                :current="request()->routeIs('warehouse.suppliers')"
                 wire:navigate
             >
                 Proveedores
             </flux:navlist.item>
         </flux:navlist.group>
+        @endcanany
     @endif
     @if($modules['modules.purchases'])
+        @canany(['menu warehouse manager','menu general administrator'])
         <flux:navlist.group heading="Ventas" expandable>
             <flux:navlist.item
                 icon="rectangle-stack"
@@ -161,8 +170,10 @@
                 Clientes
             </flux:navlist.item>
         </flux:navlist.group>
+        @endcanany
     @endif
     @if($modules['modules.access'])
+        @canany(['menu access','menu general administrator'])
         <flux:navlist.group heading="Accesos" expandable>
             <flux:navlist.item
                 icon="users"
@@ -174,8 +185,10 @@
             </flux:navlist.item>
 
         </flux:navlist.group>
+        @endcanany
     @endif
     @if($modules['modules.reports'])
+        @canany(['menu reports','menu general administrator'])
         <flux:navlist.group heading="Reportes" expandable>
             <flux:navlist.item
                 icon="rectangle-stack"
@@ -194,7 +207,16 @@
             >
                 Ventas
             </flux:navlist.item>
+            <flux:navlist.item
+                icon="hand-raised"
+                :href="route('users.audits')"
+                :current="request()->routeIs('users.audits')"
+                wire:navigate
+            >
+                Auditorias
+            </flux:navlist.item>
         </flux:navlist.group>
+        @endcanany
     @endif
 
     <flux:spacer/>

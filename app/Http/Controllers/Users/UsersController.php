@@ -21,4 +21,8 @@ class UsersController extends Controller
     {
         return view('users.permissions');
     }
+    public function pageAudits(Request $request)
+    {
+        return view('users.audits');
+    }
 }
