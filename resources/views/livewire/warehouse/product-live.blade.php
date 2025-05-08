@@ -87,6 +87,12 @@
         </div>
 
     </form>
+    <div class="py-2">
+        <input type="text" class="form-text" id="search"
+               wire:model="search"
+               wire:keydown.enter="buscar"
+               placeholder="Buscar producto">
+    </div>
     <div class="table-container">
         <table>
             <thead>

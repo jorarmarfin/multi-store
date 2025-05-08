@@ -46,4 +46,14 @@ class Product extends Model
     {
         return $this->belongsTo(Unit::class);
     }
+    protected static function booted()
+    {
+        static::created(function ($product) {
+            $prefix = mb_strtoupper(substr($product->name, 0, 3));
+            $suffix = str_pad($product->id, 5, '0', STR_PAD_LEFT); // LAP00001
+            $product->code = $prefix . $suffix;
+            $product->saveQuietly(); // evita recursividad
+        });
+    }
+
 }

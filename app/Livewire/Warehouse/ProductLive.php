@@ -14,10 +14,11 @@ class ProductLive extends Component
     public ProductForm $form;
     public bool $isEdit = false;
     public int $product_id;
+    public string $search = '';
     public function render()
     {
         return view('livewire.warehouse.product-live',[
-            'products' => $this->getProducts()->paginate(50),
+            'products' => $this->getProducts()->orderBy('created_at','desc')->paginate(50),
             'categories' => $this->ddlCategories(),
             'suppliers' => $this->ddlSuppliers(),
             'units' => $this->ddlUnits()
@@ -52,5 +53,9 @@ class ProductLive extends Component
     public function deleteProduct($product_id):void
     {
         $this->form->delete($product_id);
+    }
+    public function buscar()
+    {
+
     }
 }

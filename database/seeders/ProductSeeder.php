@@ -2,1049 +2,128 @@
 
 namespace Database\Seeders;
 
+use App\Models\Product;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
 class ProductSeeder extends Seeder
 {
     public function run(): void
     {
-        DB::table('products')->insert([
-            [
-                'code' => '5fb7a557-a169-440b-a547-a23540136a32',
-                'name' => 'ACIDO MURIATICO KAZVEL X GALON',
-                'description' => null,
-                'category_id' => 24,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'a7e0f349-907c-44d0-93b5-b73fae5d44bf',
-                'name' => 'ALCOHOL ALKOFARMA 70 X 1 LT',
-                'description' => null,
-                'category_id' => 1,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '3c7e2cf1-da87-4f48-a539-9807e8e8a97d',
-                'name' => 'ALCOHOL ALKOFARMA GEL X 1 LT',
-                'description' => null,
-                'category_id' => 1,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'd69cb63d-265a-494a-99ed-4f030e8f8ee8',
-                'name' => 'ALCOHOL EBRIEL EN GEL SACHET X 800 ML CAJ X 12 UND',
-                'description' => null,
-                'category_id' => 1,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '135afa51-02c6-472b-be55-2fcfc1f431e2',
-                'name' => 'ALCOHOL ISOPROPILICO X 1 LT',
-                'description' => null,
-                'category_id' => 1,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'f2d972b9-25ef-46e4-8e8f-60e248c43828',
-                'name' => 'AMBIENTADOR GLADE AUTOMATICO CON DISPENSADOR 270 ML',
-                'description' => null,
-                'category_id' => 3,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'a06386f7-703b-4c4b-95c2-d445a92b7448',
-                'name' => 'AMBIENTADOR GLADE REPUESTO AUTOMATICO 270 ML',
-                'description' => null,
-                'category_id' => 3,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '4cba8f4e-b579-4337-a0b1-27ff00614294',
-                'name' => 'AMBIENTADOR GLADE  SPRAY 400 ML',
-                'description' => null,
-                'category_id' => 3,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '4994ec38-098e-4808-a221-ea53b26a4f8d',
-                'name' => 'AMBIENTADOR SAPOLIO REPUESTO AUTOMATICO 240 ML FLORES',
-                'description' => null,
-                'category_id' => 3,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'bebb2e21-6c73-4456-a208-788b71511b39',
-                'name' => 'BALDE 17 LT',
-                'description' => null,
-                'category_id' => 16,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'ccf1511d-9edf-4b67-8a8f-308c6b8138e9',
-                'name' => 'BOLSA BLANCA 35 LT PAQ X 100 UND',
-                'description' => null,
-                'category_id' => 12,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'db57c3f0-92d8-45b3-b88f-8fecce462af5',
-                'name' => 'BOLSA NEGRA 240 LT X 100 UND',
-                'description' => null,
-                'category_id' => 12,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '690c3077-55ce-4cd8-9660-9930fe32cfe2',
-                'name' => 'BOLSA NEGRA 220 LT X 100 UND',
-                'description' => null,
-                'category_id' => 12,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'ad093adf-12ea-4631-8030-607ae912d018',
-                'name' => 'BOLSA NEGRA 180 LT X 100 UND',
-                'description' => null,
-                'category_id' => 12,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'b61484cb-2a85-40ac-b263-e98ff3927d9d',
-                'name' => 'BOLSA NEGRA 140 LT X 100 UND',
-                'description' => null,
-                'category_id' => 12,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'c910f986-1844-443a-9352-1e5dfdc1e1bc',
-                'name' => 'BOLSA NEGRA 75 LT X 100 UND',
-                'description' => null,
-                'category_id' => 12,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'e888d548-e35e-47c7-95bd-ce8815988006',
-                'name' => 'BOLSA NEGRA 50 LT X 100 UND',
-                'description' => null,
-                'category_id' => 12,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '5c9a3702-52de-4ff8-bd21-e1d166afef83',
-                'name' => 'BOLSA NEGRA 35 LT X 100 UND',
-                'description' => null,
-                'category_id' => 12,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'a967637a-4360-4324-a431-3e6f8ed80d56',
-                'name' => 'BOLSA NEGRA 26X40 X 100 UND',
-                'description' => null,
-                'category_id' => 12,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'cf1a400a-0bcf-4940-b2cc-0d87ca5c840d',
-                'name' => 'BOLSA NEGRA 20*30 X 100 UND',
-                'description' => null,
-                'category_id' => 12,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '33fdf15d-50a0-45d7-a3ae-03abfbaeb09d',
-                'name' => 'BOLSA NEGRA 18*26* X 100 UND',
-                'description' => null,
-                'category_id' => 12,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '78ac0cc0-5332-4f58-9c3a-3b4873573a8e',
-                'name' => 'BOLSA ROJA 180 LT X 100 UND',
-                'description' => null,
-                'category_id' => 12,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '8e2c1fed-a68d-4595-9f64-550bdf877ac3',
-                'name' => 'BOLSA ROJA 140 LT X 100 UND',
-                'description' => null,
-                'category_id' => 12,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '0405c8a6-2d1e-459d-884c-21cbd412ffa4',
-                'name' => 'BOLSA ROJA 20X30 X 100 UND',
-                'description' => null,
-                'category_id' => 12,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '744bf5ec-c3ad-4b8c-9563-768cecefec12',
-                'name' => 'BOLSA ROJA 26X40 X 100 UND',
-                'description' => null,
-                'category_id' => 12,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '5b2a66da-0848-4386-b88c-0a093674b64d',
-                'name' => 'CERA LIQUIDA X GALON GOLDEN',
-                'description' => null,
-                'category_id' => 4,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '20749900-a60a-4e9d-8137-38dd3a0e63ae',
-                'name' => 'CERA LIQUIDA X GALON KAZVEL',
-                'description' => null,
-                'category_id' => 4,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '99f4a02d-9e71-4e04-b67b-9ff1e6eb49d1',
-                'name' => 'CERA TEKNO PASTA ROJA BALDE',
-                'description' => null,
-                'category_id' => 4,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'a8896191-1eb6-4d03-ae59-fbb0a6c8ccb7',
-                'name' => 'CHAMPU ALFOMBRA KAZVEL X GALON',
-                'description' => null,
-                'category_id' => 24,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'e53a381d-2b2a-4d8b-866e-754c1ac2c913',
-                'name' => 'CREMA LIMPIADORA INTRA PREMIO 500 ML',
-                'description' => null,
-                'category_id' => 5,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '5c024f01-1b85-474c-819e-6eaab9aedff9',
-                'name' => 'CREMA LIMPIADORA INTRA PREMIO SPARY 360 ML',
-                'description' => null,
-                'category_id' => 5,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'a7a25a6c-9f6c-4e62-9047-bb9b26ab1865',
-                'name' => 'DESATORADOR LIQUIDO SAPOLIO BAÑO X 980 ML',
-                'description' => null,
-                'category_id' => 6,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '4a765188-6350-4bdf-90aa-e0a7508d5a82',
-                'name' => 'DESATORADOR TIRABUZON MANGO MADERA C/JEBE NEGRO',
-                'description' => null,
-                'category_id' => 6,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '461bc747-4f9c-417c-b037-3a54ec3710c6',
-                'name' => 'DETERGENTE ARIEL X 2.8 KG',
-                'description' => null,
-                'category_id' => 2,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '20e74bbb-918c-4c6f-b031-78dcf474bc6c',
-                'name' => 'DETERGENTE SAPOLIO X 13.50 KG',
-                'description' => null,
-                'category_id' => 2,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '9e43d63c-b1bb-4870-ba89-2d7e406fd12f',
-                'name' => 'DETERGENTE SAPOLIO X 2 KG',
-                'description' => null,
-                'category_id' => 2,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '7c6d8c82-abbc-4f35-81c0-2c426e481b08',
-                'name' => 'DETERGENTE SAPOLIO X 4 KG',
-                'description' => null,
-                'category_id' => 2,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '8000ba27-e35c-49b0-9e6f-c3c7f02febe5',
-                'name' => 'DETERGENTE SAPOLIO X 14 KG',
-                'description' => null,
-                'category_id' => 2,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '633e15a6-67aa-4bc2-b92c-22fef7813b30',
-                'name' => 'DISPENSADOR HIGIENICO JUMBO EBRIEL BLANCO',
-                'description' => null,
-                'category_id' => 8,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '1759cf39-f61b-4a86-aaf3-6a9717e5374e',
-                'name' => 'DISPENSADOR HIGIENICO JUMBO EBRIEL HUMO',
-                'description' => null,
-                'category_id' => 8,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '5322dfa2-6d73-4f81-840a-e0236045f8f2',
-                'name' => 'DISPENSADOR HIGIENICO JUMBO EBRIEL NEGRO',
-                'description' => null,
-                'category_id' => 8,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '5712c9e0-6c8c-41c8-ab66-56a75a9c7660',
-                'name' => 'DISPENSADOR HIGIENICO JUMBO MASTER CLEAN BLANCO',
-                'description' => null,
-                'category_id' => 8,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'b6a9c92e-7c91-4bc5-ab6f-7dc1e9610658',
-                'name' => 'DISPENSADOR JABON LIQUIDO EBRIEL ACERO',
-                'description' => null,
-                'category_id' => 2,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '21cdae5e-5c8d-4224-a875-6d944027fd9d',
-                'name' => 'DISPENSADOR JABON LIQUIDO EBRIEL DOBLE SISTEMA',
-                'description' => null,
-                'category_id' => 2,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'd4f60668-ba09-4f0a-8264-7d450e8d8d5c',
-                'name' => 'DISPENSADOR JABON LIQUIDO MASTER CARS DOBLE SISTEMA',
-                'description' => null,
-                'category_id' => 2,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '747b627a-d034-445e-83fb-0f9ed48093f9',
-                'name' => 'DISPENSADOR TOALLA AUTOCORTE EBRIEL BLANCO',
-                'description' => null,
-                'category_id' => 8,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '1076e1eb-d85c-47aa-8e31-310c021a9843',
-                'name' => 'DISPENSADOR TOALLA PALANCA EBRIEL BLANCO',
-                'description' => null,
-                'category_id' => 8,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '13d8e828-197f-440a-a0b3-a21f384133be',
-                'name' => 'ESCOBON HUDE',
-                'description' => null,
-                'category_id' => 24,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '1fb19448-4dca-4952-9af4-d58ff3c235a7',
-                'name' => 'ESPONJA VERDE SCOTT BRITE DOBLE  X 7 UND',
-                'description' => null,
-                'category_id' => 22,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '0b5a31fc-c3ff-4fa4-b4e5-cbcf6a47bb53',
-                'name' => 'ESPONJA VERDE SCOTT BRITE CAJ X 15 UND',
-                'description' => null,
-                'category_id' => 22,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '3b058ec2-1ffd-468a-83f6-c40959d76816',
-                'name' => 'ESPONJA VERDE SCOTT BRITE X UND',
-                'description' => null,
-                'category_id' => 22,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '049d447e-3825-4cdc-9654-83794cf55e47',
-                'name' => 'FRANELA AMARILLA X MT',
-                'description' => null,
-                'category_id' => 14,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'edb54c32-b070-4889-8b6c-0967162c0d58',
-                'name' => 'GUANTES ETERNA CALIBRE 25 T/8 NEGRO',
-                'description' => null,
-                'category_id' => 10,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '11893737-114c-4b3d-ac27-05077bf9dd2f',
-                'name' => 'GUANTES PROTEX CALIBRE 25 NEGRO T/8',
-                'description' => null,
-                'category_id' => 10,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '42b5446e-eb1d-4c77-aa67-909ca7d6cd76',
-                'name' => 'GUANTES PROTEX CALIBRE 35 NEGRO T/8',
-                'description' => null,
-                'category_id' => 10,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'd60b6c6c-8b9a-4545-bce3-4a9da4a5c7f6',
-                'name' => 'GUANTES QUIRURGICO CAJ T/M',
-                'description' => null,
-                'category_id' => 10,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '0393313e-b744-4da6-aedd-1040174e40fe',
-                'name' => 'GUANTES QUIRURGICO FAMILY DOCTOR  CAJ T/L',
-                'description' => null,
-                'category_id' => 10,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'e4d50070-aa27-46e2-a58e-dc9480997755',
-                'name' => 'GUANTES VIRUTEX CONVENIENTE AMARILLO T/S 7',
-                'description' => null,
-                'category_id' => 10,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '0cfdb4d1-d5b1-4dba-9540-03ee0baaa68c',
-                'name' => 'GUANTES VIRUTEX CONVENIENTE AMARILLO T/M 8',
-                'description' => null,
-                'category_id' => 10,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'aae3e1c4-d63a-40f7-8507-86b13a57eba2',
-                'name' => 'GUANTES VIRUTEX CONVENIENTE AMARILLO T/L 9',
-                'description' => null,
-                'category_id' => 10,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'c97c5f89-1dbd-4490-a6b2-4d8c54abd03c',
-                'name' => 'HARPIC LIQUIDO NEGRO 760 ML',
-                'description' => null,
-                'category_id' => 24,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'a70f6283-0308-44d1-857c-3922e951da8b',
-                'name' => 'HIGIENICO ELITE X 500 MT X 4 ROLLOS',
-                'description' => null,
-                'category_id' => 8,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '74d49e4c-b397-41d5-99c5-4f2cc5ba50f8',
-                'name' => 'HIGIENICO ELITE DOBLE HOJA 250 MT  PAQ X 06 ROLLOS',
-                'description' => null,
-                'category_id' => 8,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '1e5fee6c-f617-4671-9582-d4e410ab09de',
-                'name' => 'HIGIENICO SUAVE PAQ X 40 UND',
-                'description' => null,
-                'category_id' => 8,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '293eddc1-9c32-41a0-a1cf-0e5f2037db51',
-                'name' => 'HONGUITO',
-                'description' => null,
-                'category_id' => 24,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'be2c8904-c555-44a5-a2b4-acae7cfb972a',
-                'name' => 'JABON DE TOCADOR NEKO X 125 GR',
-                'description' => null,
-                'category_id' => 2,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'f004ecb6-dbcc-4cf3-89c9-5e245451d758',
-                'name' => 'JABON DE TOCADOR PROTEX X 125 GR',
-                'description' => null,
-                'category_id' => 2,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'd430fb79-d1e2-4071-8866-45142e1e5c4f',
-                'name' => 'JABON ESPUMA EBRIEL SACHET X 800 ML',
-                'description' => null,
-                'category_id' => 2,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '8440e277-0adf-4a2c-8407-ca07f6deccbf',
-                'name' => 'JABON LIQUIDO EBRIEL ANTIBACTERIAL SACHET X 800 ML',
-                'description' => null,
-                'category_id' => 2,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '42cc69e8-02d0-44db-931b-7178df6be507',
-                'name' => 'JABON LIQUIDO EBRIEL SACHET X 800 ML',
-                'description' => null,
-                'category_id' => 2,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '0ad46340-7298-4d23-a979-eb60b5eb957a',
-                'name' => 'JABON LIQUIDO KAZVEL LAVANDA X GALON',
-                'description' => null,
-                'category_id' => 2,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'd786bc99-e4e9-44c6-b9c3-1735c5f5700b',
-                'name' => 'LAVAVAJILLA AYUDIN LIQUIDO LIMON 900 ML',
-                'description' => null,
-                'category_id' => 19,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '43e98f50-975c-4571-aa71-bccf1b7d75ea',
-                'name' => 'LAVAVAJILLA AYUDIN PASTA 750 GM',
-                'description' => null,
-                'category_id' => 19,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'b7bb3b67-c474-42e0-b0f8-d68301c730d3',
-                'name' => 'LAVAVAJILLA AYUDIN PASTA 950 GM',
-                'description' => null,
-                'category_id' => 19,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '472d2765-cd38-44b8-8309-a5b0d3df7e48',
-                'name' => 'LAVAVAJILLA LIQUIDA KAZVEL',
-                'description' => null,
-                'category_id' => 19,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'b4ab2afb-98f0-4113-af13-5e59c55fe328',
-                'name' => 'LAVAVAJILLA SAPOLIO LIQUIDO GALON X 5 LT',
-                'description' => null,
-                'category_id' => 19,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'e6e463cb-8ff6-4d9e-a6d3-92180c2d4e39',
-                'name' => 'LEJIA CLOROX X GALON',
-                'description' => null,
-                'category_id' => 24,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '42fae6fe-056f-484a-868c-b29574d84244',
-                'name' => 'LEJIA GALÓN 5%',
-                'description' => null,
-                'category_id' => 24,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '94204cb4-5ee5-476e-8525-85702ef066d1',
-                'name' => 'LIMPIATODO KAZVEL X GALÓN',
-                'description' => null,
-                'category_id' => 5,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '2cffe415-55d1-4f33-802b-7e60f14faf38',
-                'name' => 'LUSTRA MUEBLE PREMIO DE MADERA 5 EN 1 SPRAY',
-                'description' => null,
-                'category_id' => 3,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '102158ab-562b-402a-9e2c-c90566d255d4',
-                'name' => 'MASCARILLA KN-95 BLANCA MAYFIELD CAJ X 10',
-                'description' => null,
-                'category_id' => 11,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'cd36e191-a3c8-4302-89f5-20eba3efb27e',
-                'name' => 'MATA MOSCAS Y ZANCUDOS SAPOLIO SPRAY X 360 ML',
-                'description' => null,
-                'category_id' => 3,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '38a39a49-b435-407f-aa85-630dc012c41b',
-                'name' => 'PAÑO MICROFIBRA CHICO',
-                'description' => null,
-                'category_id' => 14,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '27194f8c-c850-462a-950b-e84fdd1c70fc',
-                'name' => 'PAÑO MICROFIBRA GRANDE',
-                'description' => null,
-                'category_id' => 14,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '4c07d95c-e21c-44e6-a51b-5c5bfb4e4c10',
-                'name' => 'PAÑO VIRUTEX ABSORBENTE AMARILLO PAQ X 20',
-                'description' => null,
-                'category_id' => 14,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '8b4570b4-71a7-4f5d-bc44-be1668699655',
-                'name' => 'PAPEL HIGIENICO JUMBO',
-                'description' => null,
-                'category_id' => 8,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '3b81283c-6796-4dfc-aeb5-6f8b9401d0ca',
-                'name' => 'PAPEL HIGIENICO JUMBO 24 GR 9 ANCHO X 24 DIAMETRO',
-                'description' => null,
-                'category_id' => 8,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '2f8512a8-2e06-4ff2-ad39-94138e975a75',
-                'name' => 'PAPEL SABANILLA ELITE PAQ X 02 X 100 M',
-                'description' => null,
-                'category_id' => 8,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '208f8596-bd71-4171-b12d-13432cf2f6ee',
-                'name' => 'PAPEL TOALLA JUMBO',
-                'description' => null,
-                'category_id' => 8,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '9173439c-6c06-48f0-be71-b4e53610edbf',
-                'name' => 'PAPEL TOALLA ROLLO',
-                'description' => null,
-                'category_id' => 8,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '18a5d972-1c49-4233-a32c-b5c8e4a7e714',
-                'name' => 'PASTILLA BAÑO MR JOSSY FRESA',
-                'description' => null,
-                'category_id' => 24,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '55511a1b-227f-4c61-ba99-ca9b5c5b86ad',
-                'name' => 'PASTILLA BAÑO SAPOLIO AZUL WC X UND',
-                'description' => null,
-                'category_id' => 24,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '394db632-524b-442e-9ce4-9aeb5f5362b8',
-                'name' => 'PASTILLA BAÑO SAPOLIO AZUL WC X 2 UND',
-                'description' => null,
-                'category_id' => 24,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '13f15164-12b4-4ec9-a092-3e08abb6a03e',
-                'name' => 'PINO NATURAL KAZVEL X GALON',
-                'description' => null,
-                'category_id' => 24,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'eacfd09f-66ef-44ae-b72d-0127c15cbda6',
-                'name' => 'PLUMERO DE TELA',
-                'description' => null,
-                'category_id' => 24,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'db4a9964-41f4-4c9a-ad1b-4874ef84a8e1',
-                'name' => 'QUITA GRASA KAZVEL X GALON',
-                'description' => null,
-                'category_id' => 24,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'edab49f9-ba3c-42f6-92f7-472a49839e09',
-                'name' => 'QUITASARRO KAZVEL WC X GALON',
-                'description' => null,
-                'category_id' => 24,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '0ada01f5-8f17-44e9-a16d-3f188601fc56',
-                'name' => 'SACAGRASA SAPOLIO GALON X 5 LT',
-                'description' => null,
-                'category_id' => 24,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '1f3e73fe-10b0-4136-afed-5aa6e58d2ad0',
-                'name' => 'SECADOR DE MANO WORK DRYER AUTOMATICO',
-                'description' => null,
-                'category_id' => 23,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'a5757c1e-21e9-4d7e-a4ad-3a196dd761e1',
-                'name' => 'SILICONA KANAO',
-                'description' => null,
-                'category_id' => 20,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '731e88b1-d1a7-430b-b064-1a73782e6de5',
-                'name' => 'SILICONA SAPOLIO SPRAY CHERRY 360 ML',
-                'description' => null,
-                'category_id' => 3,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '4ebef966-112d-4d9e-baeb-f09b795e1ed6',
-                'name' => 'SILICONA SAPOLIO SPRAY',
-                'description' => null,
-                'category_id' => 3,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '036e922a-019d-4411-9192-89e0cd97597e',
-                'name' => 'SILLITA NIÑO',
-                'description' => null,
-                'category_id' => 24,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '0a78d45e-0a13-45bb-a012-3d8be3f30519',
-                'name' => 'SUAVISANTE AMOR 5 LT',
-                'description' => null,
-                'category_id' => 24,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'f578e0ec-e32a-4261-a662-7ea8557ac0d9',
-                'name' => 'TACHO PAPELERA AUTOMATICA DANUBIO # 25 REY AMARILLO',
-                'description' => null,
-                'category_id' => 17,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '539be246-577a-4636-bc63-97d753d3ec82',
-                'name' => 'TACHO PAPELERA AUTOMATICA DANUBIO # 25 REY NEGRO',
-                'description' => null,
-                'category_id' => 17,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '8f377d25-36b6-42d5-bf4f-69e0ef149fdb',
-                'name' => 'TACHO PAPELERA AUTOMATICA DANUBIO # 25 REY ROJO',
-                'description' => null,
-                'category_id' => 17,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '831f8b54-4292-484d-83af-361bc2f5bc2e',
-                'name' => 'TACHO PAPELERA BODEGUITA VAIVEN 75 LT ECOBASA',
-                'description' => null,
-                'category_id' => 17,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '24d38709-2328-41bd-b4a4-25c9fcf0cfb7',
-                'name' => 'TAPA DE INODORO ELONGADO FIORI 46.5',
-                'description' => null,
-                'category_id' => 24,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '1e712c08-b687-49d1-a2e4-ff711d8d54a2',
-                'name' => 'TAPA DE INODORO REDONDO TREBOL  42',
-                'description' => null,
-                'category_id' => 24,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '03c59c2f-26e1-44f9-a3ec-ad14f763226f',
-                'name' => 'TOALLA NOVA NARANJA PAQ X 12 ROLLOS',
-                'description' => null,
-                'category_id' => 8,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '2937d435-629c-4eea-a9a9-d12b2258e1a9',
-                'name' => 'TOALLA INTERFOLIADO SUMAC CAJ X 20 X 175 HOJAS',
-                'description' => null,
-                'category_id' => 8,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'e67a4064-83aa-4b88-82f8-d91abf01ca70',
-                'name' => 'PAPEL TOLLA INTERFOLIADO ELITE DOBLE HOJA XL',
-                'description' => null,
-                'category_id' => 8,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => 'e8f2310b-d802-4d06-a675-96e3b76acbfd',
-                'name' => 'TRAPEADOR MICROFIBRA CON OJAL',
-                'description' => null,
-                'category_id' => 13,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'code' => '7b751894-0fc8-4d5c-82cd-3b803cc83345',
-                'name' => 'TRAPO INDUSTRIAL BLANCOX KG',
-                'description' => null,
-                'category_id' => 14,
-                'unit_id' => 1,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-        ]);
+        Product::create(['code'=>'ACI00001','name'=>'ACIDO MURIATICO KAZVEL X GALON','category_id'=>'24','unit_id'=>'1']);
+        Product::create(['code'=>'ALC00002','name'=>'ALCOHOL ALKOFARMA 70 X 1 LT','category_id'=>'1','unit_id'=>'1']);
+        Product::create(['code'=>'ALC00003','name'=>'ALCOHOL ALKOFARMA GEL X 1 LT','category_id'=>'1','unit_id'=>'1']);
+        Product::create(['code'=>'ALC00004','name'=>'ALCOHOL EBRIEL EN GEL SACHET X 800 ML CAJ X 12 UND','category_id'=>'1','unit_id'=>'1']);
+        Product::create(['code'=>'ALC00005','name'=>'ALCOHOL ISOPROPILICO X 1 LT','category_id'=>'1','unit_id'=>'1']);
+        Product::create(['code'=>'AMB00006','name'=>'AMBIENTADOR GLADE AUTOMATICO CON DISPENSADOR 270 ML','category_id'=>'3','unit_id'=>'1']);
+        Product::create(['code'=>'AMB00007','name'=>'AMBIENTADOR GLADE REPUESTO AUTOMATICO 270 ML','category_id'=>'3','unit_id'=>'1']);
+        Product::create(['code'=>'AMB00008','name'=>'AMBIENTADOR GLADE  SPRAY 400 ML','category_id'=>'3','unit_id'=>'1']);
+        Product::create(['code'=>'AMB00009','name'=>'AMBIENTADOR SAPOLIO REPUESTO AUTOMATICO 240 ML FLORES','category_id'=>'3','unit_id'=>'1']);
+        Product::create(['code'=>'BAL00010','name'=>'BALDE 17 LT','category_id'=>'16','unit_id'=>'1']);
+        Product::create(['code'=>'BOL00011','name'=>'BOLSA BLANCA 35 LT PAQ X 100 UND','category_id'=>'12','unit_id'=>'1']);
+        Product::create(['code'=>'BOL00012','name'=>'BOLSA NEGRA 240 LT X 100 UND','category_id'=>'12','unit_id'=>'1']);
+        Product::create(['code'=>'BOL00013','name'=>'BOLSA NEGRA 220 LT X 100 UND','category_id'=>'12','unit_id'=>'1']);
+        Product::create(['code'=>'BOL00014','name'=>'BOLSA NEGRA 180 LT X 100 UND','category_id'=>'12','unit_id'=>'1']);
+        Product::create(['code'=>'BOL00015','name'=>'BOLSA NEGRA 140 LT X 100 UND','category_id'=>'12','unit_id'=>'1']);
+        Product::create(['code'=>'BOL00016','name'=>'BOLSA NEGRA 75 LT X 100 UND','category_id'=>'12','unit_id'=>'1']);
+        Product::create(['code'=>'BOL00017','name'=>'BOLSA NEGRA 50 LT X 100 UND','category_id'=>'12','unit_id'=>'1']);
+        Product::create(['code'=>'BOL00018','name'=>'BOLSA NEGRA 35 LT X 100 UND','category_id'=>'12','unit_id'=>'1']);
+        Product::create(['code'=>'BOL00019','name'=>'BOLSA NEGRA 26X40 X 100 UND','category_id'=>'12','unit_id'=>'1']);
+        Product::create(['code'=>'BOL00020','name'=>'BOLSA NEGRA 20*30 X 100 UND','category_id'=>'12','unit_id'=>'1']);
+        Product::create(['code'=>'BOL00021','name'=>'BOLSA NEGRA 18*26* X 100 UND','category_id'=>'12','unit_id'=>'1']);
+        Product::create(['code'=>'BOL00022','name'=>'BOLSA ROJA 180 LT X 100 UND','category_id'=>'12','unit_id'=>'1']);
+        Product::create(['code'=>'BOL00023','name'=>'BOLSA ROJA 140 LT X 100 UND','category_id'=>'12','unit_id'=>'1']);
+        Product::create(['code'=>'BOL00024','name'=>'BOLSA ROJA 20X30 X 100 UND','category_id'=>'12','unit_id'=>'1']);
+        Product::create(['code'=>'BOL00025','name'=>'BOLSA ROJA 26X40 X 100 UND','category_id'=>'12','unit_id'=>'1']);
+        Product::create(['code'=>'CER00026','name'=>'CERA LIQUIDA X GALON GOLDEN','category_id'=>'4','unit_id'=>'1']);
+        Product::create(['code'=>'CER00027','name'=>'CERA LIQUIDA X GALON KAZVEL','category_id'=>'4','unit_id'=>'1']);
+        Product::create(['code'=>'CER00028','name'=>'CERA TEKNO PASTA ROJA BALDE','category_id'=>'4','unit_id'=>'1']);
+        Product::create(['code'=>'CHA00029','name'=>'CHAMPU ALFOMBRA KAZVEL X GALON','category_id'=>'24','unit_id'=>'1']);
+        Product::create(['code'=>'CRE00030','name'=>'CREMA LIMPIADORA INTRA PREMIO 500 ML','category_id'=>'5','unit_id'=>'1']);
+        Product::create(['code'=>'CRE00031','name'=>'CREMA LIMPIADORA INTRA PREMIO SPARY 360 ML','category_id'=>'5','unit_id'=>'1']);
+        Product::create(['code'=>'DES00032','name'=>'DESATORADOR LIQUIDO SAPOLIO BAÑO X 980 ML','category_id'=>'6','unit_id'=>'1']);
+        Product::create(['code'=>'DES00033','name'=>'DESATORADOR TIRABUZON MANGO MADERA C/JEBE NEGRO','category_id'=>'6','unit_id'=>'1']);
+        Product::create(['code'=>'DET00034','name'=>'DETERGENTE ARIEL X 2.8 KG','category_id'=>'2','unit_id'=>'1']);
+        Product::create(['code'=>'DET00035','name'=>'DETERGENTE SAPOLIO X 13.50 KG','category_id'=>'2','unit_id'=>'1']);
+        Product::create(['code'=>'DET00036','name'=>'DETERGENTE SAPOLIO X 2 KG','category_id'=>'2','unit_id'=>'1']);
+        Product::create(['code'=>'DET00037','name'=>'DETERGENTE SAPOLIO X 4 KG','category_id'=>'2','unit_id'=>'1']);
+        Product::create(['code'=>'DET00038','name'=>'DETERGENTE SAPOLIO X 14 KG','category_id'=>'2','unit_id'=>'1']);
+        Product::create(['code'=>'DIS00039','name'=>'DISPENSADOR HIGIENICO JUMBO EBRIEL BLANCO','category_id'=>'8','unit_id'=>'1']);
+        Product::create(['code'=>'DIS00040','name'=>'DISPENSADOR HIGIENICO JUMBO EBRIEL HUMO','category_id'=>'8','unit_id'=>'1']);
+        Product::create(['code'=>'DIS00041','name'=>'DISPENSADOR HIGIENICO JUMBO EBRIEL NEGRO','category_id'=>'8','unit_id'=>'1']);
+        Product::create(['code'=>'DIS00042','name'=>'DISPENSADOR HIGIENICO JUMBO MASTER CLEAN BLANCO','category_id'=>'8','unit_id'=>'1']);
+        Product::create(['code'=>'DIS00043','name'=>'DISPENSADOR JABON LIQUIDO EBRIEL ACERO','category_id'=>'2','unit_id'=>'1']);
+        Product::create(['code'=>'DIS00044','name'=>'DISPENSADOR JABON LIQUIDO EBRIEL DOBLE SISTEMA','category_id'=>'2','unit_id'=>'1']);
+        Product::create(['code'=>'DIS00045','name'=>'DISPENSADOR JABON LIQUIDO MASTER CARS DOBLE SISTEMA','category_id'=>'2','unit_id'=>'1']);
+        Product::create(['code'=>'DIS00046','name'=>'DISPENSADOR TOALLA AUTOCORTE EBRIEL BLANCO','category_id'=>'8','unit_id'=>'1']);
+        Product::create(['code'=>'DIS00047','name'=>'DISPENSADOR TOALLA PALANCA EBRIEL BLANCO','category_id'=>'8','unit_id'=>'1']);
+        Product::create(['code'=>'ESC00048','name'=>'ESCOBON HUDE','category_id'=>'24','unit_id'=>'1']);
+        Product::create(['code'=>'ESP00049','name'=>'ESPONJA VERDE SCOTT BRITE DOBLE  X 7 UND','category_id'=>'22','unit_id'=>'1']);
+        Product::create(['code'=>'ESP00050','name'=>'ESPONJA VERDE SCOTT BRITE CAJ X 15 UND','category_id'=>'22','unit_id'=>'1']);
+        Product::create(['code'=>'ESP00051','name'=>'ESPONJA VERDE SCOTT BRITE X UND','category_id'=>'22','unit_id'=>'1']);
+        Product::create(['code'=>'FRA00052','name'=>'FRANELA AMARILLA X MT','category_id'=>'14','unit_id'=>'1']);
+        Product::create(['code'=>'GUA00053','name'=>'GUANTES ETERNA CALIBRE 25 T/8 NEGRO','category_id'=>'10','unit_id'=>'1']);
+        Product::create(['code'=>'GUA00054','name'=>'GUANTES PROTEX CALIBRE 25 NEGRO T/8','category_id'=>'10','unit_id'=>'1']);
+        Product::create(['code'=>'GUA00055','name'=>'GUANTES PROTEX CALIBRE 35 NEGRO T/8','category_id'=>'10','unit_id'=>'1']);
+        Product::create(['code'=>'GUA00056','name'=>'GUANTES QUIRURGICO CAJ T/M','category_id'=>'10','unit_id'=>'1']);
+        Product::create(['code'=>'GUA00057','name'=>'GUANTES QUIRURGICO FAMILY DOCTOR  CAJ T/L','category_id'=>'10','unit_id'=>'1']);
+        Product::create(['code'=>'GUA00058','name'=>'GUANTES VIRUTEX CONVENIENTE AMARILLO T/S 7','category_id'=>'10','unit_id'=>'1']);
+        Product::create(['code'=>'GUA00059','name'=>'GUANTES VIRUTEX CONVENIENTE AMARILLO T/M 8','category_id'=>'10','unit_id'=>'1']);
+        Product::create(['code'=>'GUA00060','name'=>'GUANTES VIRUTEX CONVENIENTE AMARILLO T/L 9','category_id'=>'10','unit_id'=>'1']);
+        Product::create(['code'=>'HAR00061','name'=>'HARPIC LIQUIDO NEGRO 760 ML','category_id'=>'24','unit_id'=>'1']);
+        Product::create(['code'=>'HIG00062','name'=>'HIGIENICO ELITE X 500 MT X 4 ROLLOS','category_id'=>'8','unit_id'=>'1']);
+        Product::create(['code'=>'HIG00063','name'=>'HIGIENICO ELITE DOBLE HOJA 250 MT  PAQ X 06 ROLLOS','category_id'=>'8','unit_id'=>'1']);
+        Product::create(['code'=>'HIG00064','name'=>'HIGIENICO SUAVE PAQ X 40 UND','category_id'=>'8','unit_id'=>'1']);
+        Product::create(['code'=>'HON00065','name'=>'HONGUITO','category_id'=>'24','unit_id'=>'1']);
+        Product::create(['code'=>'JAB00066','name'=>'JABON DE TOCADOR NEKO X 125 GR','category_id'=>'2','unit_id'=>'1']);
+        Product::create(['code'=>'JAB00067','name'=>'JABON DE TOCADOR PROTEX X 125 GR','category_id'=>'2','unit_id'=>'1']);
+        Product::create(['code'=>'JAB00068','name'=>'JABON ESPUMA EBRIEL SACHET X 800 ML','category_id'=>'2','unit_id'=>'1']);
+        Product::create(['code'=>'JAB00069','name'=>'JABON LIQUIDO EBRIEL ANTIBACTERIAL SACHET X 800 ML','category_id'=>'2','unit_id'=>'1']);
+        Product::create(['code'=>'JAB00070','name'=>'JABON LIQUIDO EBRIEL SACHET X 800 ML','category_id'=>'2','unit_id'=>'1']);
+        Product::create(['code'=>'JAB00071','name'=>'JABON LIQUIDO KAZVEL LAVANDA X GALON','category_id'=>'2','unit_id'=>'1']);
+        Product::create(['code'=>'LAV00072','name'=>'LAVAVAJILLA AYUDIN LIQUIDO LIMON 900 ML','category_id'=>'19','unit_id'=>'1']);
+        Product::create(['code'=>'LAV00073','name'=>'LAVAVAJILLA AYUDIN PASTA 750 GM','category_id'=>'19','unit_id'=>'1']);
+        Product::create(['code'=>'LAV00074','name'=>'LAVAVAJILLA AYUDIN PASTA 950 GM','category_id'=>'19','unit_id'=>'1']);
+        Product::create(['code'=>'LAV00075','name'=>'LAVAVAJILLA LIQUIDA KAZVEL','category_id'=>'19','unit_id'=>'1']);
+        Product::create(['code'=>'LAV00076','name'=>'LAVAVAJILLA SAPOLIO LIQUIDO GALON X 5 LT','category_id'=>'19','unit_id'=>'1']);
+        Product::create(['code'=>'LEJ00077','name'=>'LEJIA CLOROX X GALON','category_id'=>'24','unit_id'=>'1']);
+        Product::create(['code'=>'LEJ00078','name'=>'LEJIA GALÓN 5%','category_id'=>'24','unit_id'=>'1']);
+        Product::create(['code'=>'LIM00079','name'=>'LIMPIATODO KAZVEL X GALÓN','category_id'=>'5','unit_id'=>'1']);
+        Product::create(['code'=>'LUS00080','name'=>'LUSTRA MUEBLE PREMIO DE MADERA 5 EN 1 SPRAY','category_id'=>'3','unit_id'=>'1']);
+        Product::create(['code'=>'MAS00081','name'=>'MASCARILLA KN-95 BLANCA MAYFIELD CAJ X 10','category_id'=>'11','unit_id'=>'1']);
+        Product::create(['code'=>'MAT00082','name'=>'MATA MOSCAS Y ZANCUDOS SAPOLIO SPRAY X 360 ML','category_id'=>'3','unit_id'=>'1']);
+        Product::create(['code'=>'PAÑ00083','name'=>'PAÑO MICROFIBRA CHICO','category_id'=>'14','unit_id'=>'1']);
+        Product::create(['code'=>'PAÑ00084','name'=>'PAÑO MICROFIBRA GRANDE','category_id'=>'14','unit_id'=>'1']);
+        Product::create(['code'=>'PAÑ00085','name'=>'PAÑO VIRUTEX ABSORBENTE AMARILLO PAQ X 20','category_id'=>'14','unit_id'=>'1']);
+        Product::create(['code'=>'PAP00086','name'=>'PAPEL HIGIENICO JUMBO','category_id'=>'8','unit_id'=>'1']);
+        Product::create(['code'=>'PAP00087','name'=>'PAPEL HIGIENICO JUMBO 24 GR 9 ANCHO X 24 DIAMETRO','category_id'=>'8','unit_id'=>'1']);
+        Product::create(['code'=>'PAP00088','name'=>'PAPEL SABANILLA ELITE PAQ X 02 X 100 M','category_id'=>'8','unit_id'=>'1']);
+        Product::create(['code'=>'PAP00089','name'=>'PAPEL TOALLA JUMBO','category_id'=>'8','unit_id'=>'1']);
+        Product::create(['code'=>'PAP00090','name'=>'PAPEL TOALLA ROLLO','category_id'=>'8','unit_id'=>'1']);
+        Product::create(['code'=>'PAS00091','name'=>'PASTILLA BAÑO MR JOSSY FRESA','category_id'=>'24','unit_id'=>'1']);
+        Product::create(['code'=>'PAS00092','name'=>'PASTILLA BAÑO SAPOLIO AZUL WC X UND','category_id'=>'24','unit_id'=>'1']);
+        Product::create(['code'=>'PAS00093','name'=>'PASTILLA BAÑO SAPOLIO AZUL WC X 2 UND','category_id'=>'24','unit_id'=>'1']);
+        Product::create(['code'=>'PIN00094','name'=>'PINO NATURAL KAZVEL X GALON','category_id'=>'24','unit_id'=>'1']);
+        Product::create(['code'=>'PLU00095','name'=>'PLUMERO DE TELA','category_id'=>'24','unit_id'=>'1']);
+        Product::create(['code'=>'QUI00096','name'=>'QUITA GRASA KAZVEL X GALON','category_id'=>'24','unit_id'=>'1']);
+        Product::create(['code'=>'QUI00097','name'=>'QUITASARRO KAZVEL WC X GALON','category_id'=>'24','unit_id'=>'1']);
+        Product::create(['code'=>'SAC00098','name'=>'SACAGRASA SAPOLIO GALON X 5 LT','category_id'=>'24','unit_id'=>'1']);
+        Product::create(['code'=>'SEC00099','name'=>'SECADOR DE MANO WORK DRYER AUTOMATICO','category_id'=>'23','unit_id'=>'1']);
+        Product::create(['code'=>'SIL00100','name'=>'SILICONA KANAO','category_id'=>'20','unit_id'=>'1']);
+        Product::create(['code'=>'SIL00101','name'=>'SILICONA SAPOLIO SPRAY CHERRY 360 ML','category_id'=>'3','unit_id'=>'1']);
+        Product::create(['code'=>'SIL00102','name'=>'SILICONA SAPOLIO SPRAY','category_id'=>'3','unit_id'=>'1']);
+        Product::create(['code'=>'SIL00103','name'=>'SILLITA NIÑO','category_id'=>'24','unit_id'=>'1']);
+        Product::create(['code'=>'SUA00104','name'=>'SUAVISANTE AMOR 5 LT','category_id'=>'24','unit_id'=>'1']);
+        Product::create(['code'=>'TAC00105','name'=>'TACHO PAPELERA AUTOMATICA DANUBIO # 25 REY AMARILLO','category_id'=>'17','unit_id'=>'1']);
+        Product::create(['code'=>'TAC00106','name'=>'TACHO PAPELERA AUTOMATICA DANUBIO # 25 REY NEGRO','category_id'=>'17','unit_id'=>'1']);
+        Product::create(['code'=>'TAC00107','name'=>'TACHO PAPELERA AUTOMATICA DANUBIO # 25 REY ROJO','category_id'=>'17','unit_id'=>'1']);
+        Product::create(['code'=>'TAC00108','name'=>'TACHO PAPELERA BODEGUITA VAIVEN 75 LT ECOBASA','category_id'=>'17','unit_id'=>'1']);
+        Product::create(['code'=>'TAP00109','name'=>'TAPA DE INODORO ELONGADO FIORI 46.5','category_id'=>'24','unit_id'=>'1']);
+        Product::create(['code'=>'TAP00110','name'=>'TAPA DE INODORO REDONDO TREBOL  42','category_id'=>'24','unit_id'=>'1']);
+        Product::create(['code'=>'TOA00111','name'=>'TOALLA NOVA NARANJA PAQ X 12 ROLLOS','category_id'=>'8','unit_id'=>'1']);
+        Product::create(['code'=>'TOA00112','name'=>'TOALLA INTERFOLIADO SUMAC CAJ X 20 X 175 HOJAS','category_id'=>'8','unit_id'=>'1']);
+        Product::create(['code'=>'PAP00113','name'=>'PAPEL TOLLA INTERFOLIADO ELITE DOBLE HOJA XL','category_id'=>'8','unit_id'=>'1']);
+        Product::create(['code'=>'TRA00114','name'=>'TRAPEADOR MICROFIBRA CON OJAL','category_id'=>'13','unit_id'=>'1']);
+        Product::create(['code'=>'TRA00115','name'=>'TRAPO INDUSTRIAL BLANCOX KG','category_id'=>'14','unit_id'=>'1']);
+
     }
 }
