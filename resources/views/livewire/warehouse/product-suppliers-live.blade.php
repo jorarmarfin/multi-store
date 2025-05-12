@@ -1,9 +1,7 @@
 <div>
     <div>
         Producto: <span>{{$product->name}}</span>
-        <a href="{{route('warehouse.products')}}" class="btn-secondary">
-            Volver
-        </a>
+
     </div>
     <form class="grid grid-cols-4 gap-3" wire:submit="saveProductSupplier">
         <div class="form-group">
@@ -47,6 +45,9 @@
                     Guardar
                 @endif
             </button>
+            <a href="{{route('warehouse.products')}}" class="btn-secondary">
+                Cancelar
+            </a>
         </div>
 
     </form>

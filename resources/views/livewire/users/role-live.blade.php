@@ -35,8 +35,11 @@
             <tbody>
             @foreach ($roles as $role)
                 <tr>
-                    <td>{{ $role->name }}</td>
+                    <td>{{ __($role->name) }}</td>
                     <td>
+                        <a href="{{ route('users.role.permissions', $role->id) }}" class="btn-primary">
+                            Permisos
+                        </a>
                         <button wire:click="editRole({{ $role->id }})" class="btn-secondary">
                             Editar
                         </button>

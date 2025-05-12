@@ -37,7 +37,7 @@ class UsersSeeder extends Seeder
                 'password' => Hash::make('41253675')
 
             ]
-        )->assignRole('administrator');
+        )->assignRole('Warehouse Clerk');
 
 
 

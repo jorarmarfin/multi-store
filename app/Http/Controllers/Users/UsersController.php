@@ -25,4 +25,10 @@ class UsersController extends Controller
     {
         return view('users.audits');
     }
+    public function pageRolePermissions($role_id)
+    {
+        return view('users.role-permissions', [
+            'role_id' => $role_id,
+        ]);
+    }
 }

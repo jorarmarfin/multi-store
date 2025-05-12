@@ -5,9 +5,11 @@
             <tr>
                 <th>Log</th>
                 <th>Descripción</th>
-                <th>Modelo</th>
+                <th>Tipo de asunto</th>
                 <th>Evento</th>
-                <th>Modelo ejecutor</th>
+                <th>Id asunto</th>
+                <th>Tipo de causa</th>
+                <th>Id de causa</th>
                 <th>Propiedades</th>
                 <th>Fecha</th>
 
@@ -26,7 +28,9 @@
                     </td>
                     <td>{{ $audit->subject_type }}</td>
                     <td>{{ $audit->event }}</td>
+                    <td>{{ $audit->subject_id }}</td>
                     <td>{{ $audit->causer_type }}</td>
+                    <td>{{ $audit->causer_id }}</td>
                     <td>{{ $audit->properties }}</td>
                     <td>{{ $audit->created_at->format('Y-m-d H:i:s') }}</td>
 

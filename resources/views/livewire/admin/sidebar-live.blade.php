@@ -43,7 +43,7 @@
         </flux:navlist.group>
     @endrole
     @if($modules['modules.warehouse'])
-        @canany(['menu warehouse manager','menu general administrator'])
+        @canany(['menu warehouse manager','menu general administrator','menu warehouse'])
         <flux:navlist.group heading="Almacén" expandable>
             <flux:navlist.item
                 icon="numbered-list"
@@ -127,8 +127,8 @@
         @endcanany
     @endif
     @if($modules['modules.sales'])
-        @canany(['menu warehouse manager','menu general administrator'])
-        <flux:navlist.group heading="Compras" expandable>
+        @canany(['menu sales manager','menu general administrator','menu sales clerk'])
+        <flux:navlist.group heading="Ventas" expandable>
             <flux:navlist.item
                 icon="rectangle-stack"
                 :href="route('dashboard')"
@@ -150,15 +150,15 @@
         @endcanany
     @endif
     @if($modules['modules.purchases'])
-        @canany(['menu warehouse manager','menu general administrator'])
-        <flux:navlist.group heading="Ventas" expandable>
+        @canany(['menu purchasing manager','menu general administrator','menu purchasing clerk'])
+        <flux:navlist.group heading="Compras" expandable>
             <flux:navlist.item
                 icon="rectangle-stack"
                 :href="route('dashboard')"
                 :current="request()->routeIs('dashboard')"
                 wire:navigate
             >
-                Venta
+                Compras
             </flux:navlist.item>
 
             <flux:navlist.item
@@ -243,7 +243,7 @@
 
                         <div class="grid flex-1 text-start text-sm leading-tight">
                             <span class="truncate font-semibold">{{ auth()->user()->name }}</span>
-                            <span class="truncate text-xs">{{ auth()->user()->email }}</span>
+                            <span class="truncate text-xs">{{ __(auth()->user()->getRoleNames()->first()) }}</span>
                         </div>
                     </div>
                 </div>

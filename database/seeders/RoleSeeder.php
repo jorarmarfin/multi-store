@@ -28,9 +28,12 @@ class RoleSeeder extends Seeder
         Permission::create(['name' => 'menu administrator'])->syncRoles([$ad]);
         Permission::create(['name' => 'menu inventory supervisor'])->syncRoles([$ad,$ga,$is]);
         Permission::create(['name' => 'menu warehouse manager'])->syncRoles([$ad,$ga,$wm,$wc]);
+        Permission::create(['name' => 'menu warehouse clerk'])->syncRoles([$ad,$ga,$wm,$wc]);
         Permission::create(['name' => 'menu billing'])->syncRoles([$ad,$ga,$f]);
         Permission::create(['name' => 'menu sales manager'])->syncRoles([$ad,$ga,$sm,$sc]);
+        Permission::create(['name' => 'menu sales clerk'])->syncRoles([$ad,$ga,$sm,$sc]);
         Permission::create(['name' => 'menu purchasing manager'])->syncRoles([$ad,$ga,$pm,$pc]);
+        Permission::create(['name' => 'menu purchasing clerk'])->syncRoles([$ad,$ga,$pm,$pc]);
         Permission::create(['name' => 'menu general administrator'])->syncRoles([$ad,$ga]);
         Permission::create(['name' => 'menu access'])->syncRoles([$ad,$ga,$wm,$is,$sm,$pm]);
         Permission::create(['name' => 'menu reports'])->syncRoles([$ad,$ga,$wm,$is,$sm,$pm]);

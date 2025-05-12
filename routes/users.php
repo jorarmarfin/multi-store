@@ -19,5 +19,8 @@ Route::middleware(['auth','verified'])
         Route::get('audits', [UsersController::class, 'pageAudits'])
             ->middleware('role:administrator')
             ->name('audits');
+        Route::get('role-permissions/{role_id}', [UsersController::class, 'pageRolePermissions'])
+            ->middleware('role:administrator')
+            ->name('role.permissions');
     });
 
