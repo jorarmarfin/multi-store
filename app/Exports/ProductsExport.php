@@ -2,18 +2,17 @@
 
 namespace App\Exports;
 
-use App\Models\Product;
+use App\Http\Traits\ProductTrait;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 
 class ProductsExport implements FromCollection,WithHeadings
 {
-    /**
-    * @return \Illuminate\Support\Collection
-    */
+    use ProductTrait;
+
     public function collection()
     {
-        return Product::all();
+        return $this->getProductsFromExport();
     }
     public function headings(): array
     {

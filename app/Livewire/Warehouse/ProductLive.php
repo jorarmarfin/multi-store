@@ -54,6 +54,10 @@ class ProductLive extends Component
     {
         $this->form->delete($product_id);
     }
+    public function exportFile()
+    {
+        return $this->exportFileProducts();
+    }
     public function buscar()
     {
 

@@ -60,4 +60,8 @@ class WarehouseEntryLive extends Component
     {
         $this->form->movement_date = now()->format('Y-m-d\TH:i');
     }
+    public function exportFile()
+    {
+        return $this->exportFileEntry();
+    }
 }

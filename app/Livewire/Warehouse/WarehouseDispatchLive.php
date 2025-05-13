@@ -44,13 +44,13 @@ class WarehouseDispatchLive extends Component
             $this->form->update($this->getInventoryMovement($this->inventory_movement_id));
             $title = 'Actualizar ingreso';
             $icon = 'success';
-            $message = 'Ingreso actualizado correctamente';
+            $message = 'Salida actualizada correctamente';
             $this->isEdit = false;
         }else{
             $this->form->store();
             $title = 'Guardar ingreso';
             $icon = 'success';
-            $message = 'Ingreso guardado correctamente';
+            $message = 'Salida guardada correctamente';
         }
         $this->dispatch('alert', [
             'title' => $title,
@@ -71,5 +71,9 @@ class WarehouseDispatchLive extends Component
     public function mount()
     {
         $this->form->movement_date = now()->format('Y-m-d\TH:i');
+    }
+    public function exportFile()
+    {
+        return $this->exportFileDispatch();
     }
 }

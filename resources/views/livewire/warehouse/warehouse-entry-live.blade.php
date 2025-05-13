@@ -93,6 +93,16 @@
         </div>
 
     </form>
+    <div class="py-2 flex gap-2">
+        <button type="button" class="btn-secondary cursor-pointer"
+                wire:click="exportFile">
+            <i class="fas fa-file-excel text-2xl"></i>
+        </button>
+        <button type="button" class="btn-secondary"
+                wire:click="exportFile">
+            <i class="fas fa-file-pdf text-2xl"></i>
+        </button>
+    </div>
     <div class="table-container">
         <table>
             <thead>

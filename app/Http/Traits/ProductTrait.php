@@ -2,8 +2,10 @@
 
 namespace App\Http\Traits;
 
+use App\Exports\ProductsExport;
 use App\Models\Product;
 use App\Models\ProductSupplier;
+use Maatwebsite\Excel\Facades\Excel;
 
 trait ProductTrait
 {
@@ -15,6 +17,15 @@ trait ProductTrait
             $product->whereRaw('LOWER(name) LIKE ?', ['%' . $searchTerm . '%']);
         }
         return $product;
+    }
+    public function getProductsFromExport()
+    {
+        return Product::select(
+            'products.id', 'products.code', 'products.name', 'products.description',
+            'categories.name as categories_name' ,'units.description as unit_name')
+            ->join('categories', 'products.category_id', '=', 'categories.id')
+            ->join('units', 'products.unit_id', '=', 'units.id')
+            ->get();
     }
     public function getProduct($product_id)
     {
@@ -41,6 +52,10 @@ trait ProductTrait
         );
 
         return trim($string);
+    }
+    public function exportFileProducts()
+    {
+        return Excel::download(new ProductsExport, 'productos.xlsx');
     }
 
 }
