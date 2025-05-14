@@ -9,11 +9,11 @@ use Maatwebsite\Excel\Facades\Excel;
 
 trait ProductTrait
 {
-    public function getProducts()
+    public function getProducts($search = null)
     {
         $product = Product::query();
-        if ($this->search) {
-            $searchTerm = $this->normalizeString($this->search);
+        if ($search) {
+            $searchTerm = $this->normalizeString($search);
             $product->whereRaw('LOWER(name) LIKE ?', ['%' . $searchTerm . '%']);
         }
         return $product;

@@ -18,7 +18,7 @@ class ProductLive extends Component
     public function render()
     {
         return view('livewire.warehouse.product-live',[
-            'products' => $this->getProducts()->orderBy('created_at','desc')->paginate(50),
+            'products' => $this->getProducts($this->search)->orderBy('created_at','desc')->paginate(50),
             'categories' => $this->ddlCategories(),
             'suppliers' => $this->ddlSuppliers(),
             'units' => $this->ddlUnits()
