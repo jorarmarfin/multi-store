@@ -98,10 +98,9 @@
                 wire:click="exportFile">
             <i class="fas fa-file-excel text-2xl"></i>
         </button>
-        <button type="button" class="btn-secondary"
-                wire:click="exportFile">
+        <a href="{{route('reports.movement',2)}}" target="_blank" class="btn-secondary">
             <i class="fas fa-file-pdf text-2xl"></i>
-        </button>
+        </a>
     </div>
     <div class="table-container">
         <table>

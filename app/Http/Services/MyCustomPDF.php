@@ -4,7 +4,7 @@ namespace App\Http\Services;
 use TCPDF;
 class MyCustomPDF extends TCPDF
 {
-    public string $reportTitle = 'Reporte de Productos';
+    public string $reportTitle = 'Nombre de la empresa';
     public ?string $logoPath = null;
     public string $footerText = 'MultiStore S.A.C - Todos los derechos reservados.';
 

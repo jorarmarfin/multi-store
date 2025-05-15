@@ -5,8 +5,6 @@ namespace App\Http\Traits;
 use App\Exports\DispatchExport;
 use App\Exports\EntryExport;
 use App\Exports\InventoryExport;
-use App\Exports\ProductsExport;
-use App\Exports\WarehouseEntryExport;
 use App\Models\InventoryMovement;
 use App\Models\Stock;
 use Maatwebsite\Excel\Facades\Excel;
@@ -70,6 +68,19 @@ trait InventoryMovementsTrait
                 'users.name as user_name',
             )
             ->where('movement_type_id', $id)
+            ->get();
+    }
+    public function dataExportInventory()
+    {
+        return Stock::join('products', 'stocks.product_id', '=', 'products.id')
+            ->join('warehouses', 'stocks.warehouse_id', '=', 'warehouses.id')
+            ->select(
+                'products.name as product_name',
+                'warehouses.name as warehouse_name',
+                'stocks.quantity',
+                'stocks.created_at',
+                'stocks.updated_at',
+            )
             ->get();
     }
     private function getNameFileToExport($type)

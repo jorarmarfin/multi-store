@@ -5,20 +5,23 @@ use App\Http\Services\MyCustomPDF;
 trait ReportsTrait
 {
     protected MyCustomPDF $pdf;
-    public function InitPdf($title = 'title', $autoPageBreak = true): MyCustomPDF
-    {
-        $this->pdf = new MyCustomPDF('P', 'mm', 'A4', true, 'UTF-8', false);
+    public function InitPdf(
+        string $title = 'Reporte',
+        bool $autoPageBreak = true,
+        string $orientation = 'P' // 'P' = vertical, 'L' = horizontal
+    ): MyCustomPDF {
+        $this->pdf = new MyCustomPDF($orientation, 'mm', 'A4', true, 'UTF-8', false);
 
         $this->pdf->SetTitle($title);
-        $this->pdf->SetMargins(10, 30, 10);
-        $this->pdf->SetAutoPageBreak($autoPageBreak, 20);
+        $this->pdf->SetMargins(10, 30, 10); // espacio superior para el header
+        $this->pdf->SetAutoPageBreak($autoPageBreak, 20); // espacio inferior para el footer
         $this->pdf->AddPage();
 
         $this->pdf->reportTitle = $title;
         $this->pdf->logoPath = public_path('uploads/logo_report.png');
         $this->pdf->footerText = 'Generado por MultiStore - ' . now()->format('d/m/Y');
 
-        return $this->pdf; // <-- Este return era obligatorio
+        return $this->pdf;
     }
     public function outputPdf($fileName='file',$modePrint='FI'):void
     {

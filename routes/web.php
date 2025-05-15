@@ -24,4 +24,5 @@ require __DIR__.'/warehouse.php';
 require __DIR__.'/settings.php';
 require __DIR__.'/users.php';
 require __DIR__.'/report.php';
+require __DIR__.'/company.php';
 

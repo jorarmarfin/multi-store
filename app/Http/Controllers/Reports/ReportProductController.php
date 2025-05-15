@@ -5,11 +5,11 @@ namespace App\Http\Controllers\Reports;
 use App\Http\Controllers\Controller;
 use App\Http\Traits\ProductTrait;
 use App\Http\Traits\ReportsTrait;
-use PDF;
+
 class ReportProductController extends Controller
 {
     use ReportsTrait,ProductTrait;
-    public function pdf()
+    public function pdf():void
     {
         $this->InitPdf('Reporte de Productos');
         $data = $this->getProductsFromExport();
