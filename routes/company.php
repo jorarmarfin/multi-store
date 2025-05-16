@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Warehouse\WarehouseController;
+use App\Http\Controllers\Company\CompanyController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(['auth','verified'])
@@ -8,7 +8,7 @@ Route::middleware(['auth','verified'])
     ->name('company.')
     ->group(function () {
 
-    Route::get('products', [WarehouseController::class, 'pageProducts'])
-        ->name('products');
+    Route::get('edit', [CompanyController::class, 'index'])
+        ->name('index');
 });
 

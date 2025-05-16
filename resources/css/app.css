@@ -105,6 +105,9 @@ table td {
 .form-textarea {
     @apply w-full rounded-md border border-gray-300 focus:border-gray-500 focus:ring-1 focus:ring-gray-500 shadow-sm transition-all duration-150 text-sm p-2 bg-white text-gray-900 placeholder-gray-400;
 }
+.form-file{
+    @apply w-full rounded-md border border-gray-300 focus:border-gray-500 focus:ring-1 focus:ring-gray-500 shadow-sm transition-all duration-150 text-sm p-2 bg-white text-gray-900 placeholder-gray-400;
+}
 .invalid-feedback {
     @apply text-red-600 text-sm font-bold mt-1;
 }

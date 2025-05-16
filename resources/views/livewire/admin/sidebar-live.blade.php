@@ -126,6 +126,18 @@
         </flux:navlist.group>
         @endcanany
     @endif
+    @canany(['menu company','menu general administrator'])
+        <flux:navlist.group heading="Empresa" expandable>
+            <flux:navlist.item
+                icon="home-modern"
+                :href="route('company.index')"
+                :current="request()->routeIs('company.index')"
+                wire:navigate
+            >
+                Empresa
+            </flux:navlist.item>
+        </flux:navlist.group>
+    @endcanany
     @if($modules['modules.sales'])
         @canany(['menu sales manager','menu general administrator','menu sales clerk'])
         <flux:navlist.group heading="Ventas" expandable>

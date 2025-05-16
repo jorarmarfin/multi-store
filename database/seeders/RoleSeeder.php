@@ -37,6 +37,7 @@ class RoleSeeder extends Seeder
         Permission::create(['name' => 'menu general administrator'])->syncRoles([$ad,$ga]);
         Permission::create(['name' => 'menu access'])->syncRoles([$ad,$ga,$wm,$is,$sm,$pm]);
         Permission::create(['name' => 'menu reports'])->syncRoles([$ad,$ga,$wm,$is,$sm,$pm]);
+        Permission::create(['name' => 'menu company'])->syncRoles([$ad,$ga]);
 
         Permission::create(['name' => 'Consulta inventario'])->syncRoles([$ad,$ga,$is,$wm,$wc]);
         Permission::create(['name' => 'Realiza ingreso'])->syncRoles([$ad,$ga,$wm,$wc]);
