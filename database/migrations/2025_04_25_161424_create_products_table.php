@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('code')->nullable()->unique();
             $table->string('name');
             $table->text('description')->nullable();
+            $table->integer('minimum_stock')->default(10);
             $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
             $table->foreignId('unit_id')->nullable()->constrained('units')->onDelete('cascade');
             $table->foreignId('supplier_id')->nullable()->constrained('suppliers')->onDelete('cascade');

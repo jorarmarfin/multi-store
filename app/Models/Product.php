@@ -49,11 +49,25 @@ class Product extends Model
     protected static function booted()
     {
         static::created(function ($product) {
-            $prefix = mb_strtoupper(substr($product->name, 0, 3));
-            $suffix = str_pad($product->id, 5, '0', STR_PAD_LEFT); // LAP00001
-            $product->code = $prefix . $suffix;
-            $product->saveQuietly(); // evita recursividad
+            $name = mb_strtoupper(substr(self::normalizeString($product->name), 0, 3));
+            $suffix = str_pad($product->id, 5, '0', STR_PAD_LEFT);
+            $product->code = $name . $suffix;
+            $product->saveQuietly();
         });
+    }
+
+    private static function normalizeString($string)
+    {
+        $string = strtr(
+            mb_strtolower($string, 'UTF-8'),
+            [
+                'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u',
+                'ü' => 'u', 'ñ' => 'n',
+                'Á' => 'A', 'É' => 'E', 'Í' => 'I', 'Ó' => 'O', 'Ú' => 'U',
+                'Ü' => 'U', 'Ñ' => 'N'
+            ]
+        );
+        return preg_replace('/[^A-Za-z0-9]/u', '', $string);
     }
 
 }
