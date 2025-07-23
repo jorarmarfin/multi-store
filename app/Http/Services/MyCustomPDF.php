@@ -14,12 +14,12 @@ class MyCustomPDF extends TCPDF
         if ($company->logo ) {
             //&& file_exists($company->logo)
             $imagen = env('APP_URL').'/storage/'.$company->logo;
-            $this->Image($imagen, 15, 8, 30); // x, y, width
+            $this->Image($imagen, 15, 8, 40); // x, y, width
         }
 
         $this->SetFont('helvetica', 'B', 12);
 
-        $this->SetXY(48, 10);
+        $this->SetXY(58, 10);
         if($company->name!='null')
         $this->Cell(0, 10, $company->name, 0, 1, 'L');
 
