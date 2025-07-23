@@ -10,7 +10,7 @@ class ProductForm extends Form
     public string $code = '';
     #[Validate('required')]
     public string $name = '';
-    
+
     public string $description = '';
     #[Validate('required')]
     public int $category_id = 0;

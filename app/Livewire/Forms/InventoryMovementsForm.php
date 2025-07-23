@@ -3,6 +3,7 @@
 namespace App\Livewire\Forms;
 
 use App\Models\InventoryMovement;
+use App\Models\Stock;
 use Livewire\Attributes\Validate;
 use Livewire\Form;
 
@@ -61,9 +62,33 @@ class InventoryMovementsForm extends Form
         );
         $this->reset();
     }
-    public function delete($inventory_movement_id): void
+    public function delete($inventory_movement_id,$type): void
     {
         $inventory_movement = InventoryMovement::find($inventory_movement_id);
+        $product_id = $inventory_movement->product_id;
+        $quantity = $inventory_movement->quantity;
+        $operation = $type === 'Entrada' ? '-' : '+';
+        $stock = Stock::where('product_id', $product_id)
+            ->where('warehouse_id', $inventory_movement->warehouse_id)->first();
+        if ($stock) {
+            // Actualiza el stock según el tipo de movimiento
+            if ($operation === '-') {
+                $stock->quantity -= $quantity;
+            } else {
+                $stock->quantity += $quantity;
+            }
+            //Si la diferencia es 0 elimina el stock
+            if ($stock->quantity <= 0) {
+                $stock->delete();
+            } else {
+                $stock->save();
+            }
+        }
+
+        // Verifica si el movimiento de inventario existe antes de intentar eliminarlo
+        if (!$inventory_movement) {
+            return;
+        }
         $inventory_movement->delete();
     }
 }
