@@ -181,6 +181,14 @@
             >
                 Clientes
             </flux:navlist.item>
+            <flux:navlist.item
+                icon="user-group"
+                :href="route('warehouse.suppliers')"
+                :current="request()->routeIs('warehouse.suppliers')"
+                wire:navigate
+            >
+                Proveedores
+            </flux:navlist.item>
         </flux:navlist.group>
         @endcanany
     @endif
