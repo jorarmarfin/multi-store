@@ -19,7 +19,7 @@ class MyCustomPDF extends TCPDF
 
         $this->SetFont('helvetica', 'B', 12);
         $this->SetXY(38, 10);
-        $this->Cell(0, 10, $company->name.'-'.$imagen, 0, 1, 'L');
+        $this->Cell(0, 10, $company->name, 0, 1, 'L');
 
         $this->Ln(5); // Espacio extra
     }
