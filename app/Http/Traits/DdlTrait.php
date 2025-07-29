@@ -24,7 +24,7 @@ trait DdlTrait
         } else {
             return $this->getDdlWithCondition(
                 Role::class,
-                ['name' , '!=', 'administrator']
+                [['name' , '!=', 'administrator']]
             );
         }
     }
